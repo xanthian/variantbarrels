@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    {"id":"variantbarrels:acacia_barrel","required": false},
+    {"id":"variantbarrels:birch_barrel","required": false},
+    {"id":"variantbarrels:crimson_barrel","required": false},
+    {"id":"variantbarrels:dark_oak_barrel","required": false},
+    {"id":"variantbarrels:jungle_barrel","required": false},
+    {"id":"variantbarrels:oak_barrel","required": false},
+    {"id":"variantbarrels:warped_barrel","required": false},
+    {"id":"variantbarrels:rubber_barrel", "required": false},
+    {"id":"variantbarrels:cherry_oak_barrel", "required": false},
+    {"id":"variantbarrels:dark_amaranth_barrel", "required": false},
+    {"id":"variantbarrels:palm_barrel", "required": false}
+  ]
+}

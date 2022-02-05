@@ -1,0 +1,33 @@
+{
+  "fabric:load_conditions":
+  [
+    {
+      "condition": "fabric:not",
+      "value":
+      {
+        "condition": "fabric:all_mods_loaded",
+        "values":
+        [
+          "blockus"
+        ]
+      }
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:birch_planks"
+    },
+    "S": {
+      "item": "minecraft:birch_slab"
+    }
+  },
+  "result": {
+    "item": "variantbarrels:birch_barrel"
+  }
+}

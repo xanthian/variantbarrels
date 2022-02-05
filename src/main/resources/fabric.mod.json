@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "variantbarrels",
   "version": "${version}",
 
   "name": "Variant Barrels",
@@ -12,18 +12,17 @@
     "sources": "https://github.com/xanthian/variantbarrels"
   },
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "net.xanthian.variantbarrels.Init"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "variantbarrels.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": ">=0.46.0",

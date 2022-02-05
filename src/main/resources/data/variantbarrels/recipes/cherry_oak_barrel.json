@@ -1,0 +1,27 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "promenade"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "key": {
+    "P": {
+      "item": "promenade:cherry_oak_planks"
+    },
+    "S": {
+      "item": "promenade:cherry_oak_slab"
+    }
+  },
+  "result": {
+    "item": "variantbarrels:cherry_oak_barrel"
+  }
+}

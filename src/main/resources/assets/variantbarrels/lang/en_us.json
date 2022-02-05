@@ -1,0 +1,23 @@
+{
+
+  "_comment0": "Creative Tab",
+  "itemGroup.variantbarrels.variantbarrels": "Variant Barrels",
+
+  "_comment1": "Vanilla",
+  "block.variantbarrels.acacia_barrel": "Acacia Barrel",
+  "block.variantbarrels.birch_barrel": "Birch Barrel",
+  "block.variantbarrels.dark_oak_barrel": "Dark Oak Barrel",
+  "block.variantbarrels.jungle_barrel": "Jungle Barrel",
+  "block.variantbarrels.oak_barrel": "Oak Barrel",
+  "block.minecraft.barrel": "Spruce Barrel",
+  "block.variantbarrels.crimson_barrel": "Crimson Barrel",
+  "block.variantbarrels.warped_barrel": "Warped Barrel",
+
+  "_comment2": "Tech Reborn",
+  "block.variantbarrels.rubber_barrel": "Rubber Barrel",
+
+  "_comment3": "Promenade",
+  "block.variantbarrels.cherry_oak_barrel": "Cherry Oak Barrel",
+  "block.variantbarrels.dark_amaranth_barrel": "Dark Amaranth Barrel",
+  "block.variantbarrels.palm_barrel": "Palm Barrel"
+}
