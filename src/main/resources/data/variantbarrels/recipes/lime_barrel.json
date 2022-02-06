@@ -1,0 +1,27 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "spectrum"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "key": {
+    "P": {
+      "item": "spectrum:lime_planks"
+    },
+    "S": {
+      "item": "spectrum:lime_plank_slab"
+    }
+  },
+  "result": {
+    "item": "variantbarrels:lime_barrel"
+  }
+}

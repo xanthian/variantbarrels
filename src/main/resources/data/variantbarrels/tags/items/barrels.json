@@ -11,6 +11,22 @@
     {"id":"variantbarrels:rubber_barrel", "required": false},
     {"id":"variantbarrels:cherry_oak_barrel", "required": false},
     {"id":"variantbarrels:dark_amaranth_barrel", "required": false},
-    {"id":"variantbarrels:palm_barrel", "required": false}
+    {"id":"variantbarrels:palm_barrel", "required": false},
+    {"id":"variantbarrels:black_barrel", "required": false},
+    {"id":"variantbarrels:blue_barrel", "required": false},
+    {"id":"variantbarrels:brown_barrel", "required": false},
+    {"id":"variantbarrels:cyan_barrel", "required": false},
+    {"id":"variantbarrels:gray_barrel", "required": false},
+    {"id":"variantbarrels:green_barrel", "required": false},
+    {"id":"variantbarrels:light_blue_barrel", "required": false},
+    {"id":"variantbarrels:light_gray_barrel", "required": false},
+    {"id":"variantbarrels:lime_barrel", "required": false},
+    {"id":"variantbarrels:magenta_barrel", "required": false},
+    {"id":"variantbarrels:orange_barrel", "required": false},
+    {"id":"variantbarrels:pink_barrel", "required": false},
+    {"id":"variantbarrels:purple_barrel", "required": false},
+    {"id":"variantbarrels:red_barrel", "required": false},
+    {"id":"variantbarrels:white_barrel", "required": false},
+    {"id":"variantbarrels:yellow_barrel", "required": false}
   ]
 }

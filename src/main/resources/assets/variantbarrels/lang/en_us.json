@@ -19,5 +19,24 @@
   "_comment3": "Promenade",
   "block.variantbarrels.cherry_oak_barrel": "Cherry Oak Barrel",
   "block.variantbarrels.dark_amaranth_barrel": "Dark Amaranth Barrel",
-  "block.variantbarrels.palm_barrel": "Palm Barrel"
+  "block.variantbarrels.palm_barrel": "Palm Barrel",
+  
+  "_comment4": "Spectrum",
+  "block.variantbarrels.black_barrel": "Black Barrel",
+  "block.variantbarrels.blue_barrel": "Blue Barrel",
+  "block.variantbarrels.brown_barrel": "Brown Barrel",
+  "block.variantbarrels.cyan_barrel": "Cyan Barrel",
+  "block.variantbarrels.gray_barrel": "Gray Barrel",
+  "block.variantbarrels.green_barrel": "Green Barrel",
+  "block.variantbarrels.light_blue_barrel": "Light Blue Barrel",
+  "block.variantbarrels.light_gray_barrel": "Light Gray Barrel",
+  "block.variantbarrels.lime_barrel": "Lime Barrel",
+  "block.variantbarrels.magenta_barrel": "Magenta Barrel",
+  "block.variantbarrels.orange_barrel": "Orange Barrel",
+  "block.variantbarrels.pink_barrel": "Pink Barrel",
+  "block.variantbarrels.purple_barrel": "Purple Barrel",
+  "block.variantbarrels.red_barrel": "Red Barrel",
+  "block.variantbarrels.white_barrel": "White Barrel",
+  "block.variantbarrels.yellow_barrel": "Yellow Barrel"
+
 }

@@ -32,6 +32,23 @@ public class Init implements ModInitializer {
     public static final Block CHERRY_OAK_BARREL = new VariantBarrelBlock();
     public static final Block DARK_AMARANTH_BARREL = new VariantBarrelBlock();
     public static final Block PALM_BARREL = new VariantBarrelBlock();
+    // Spectrum
+    public static final Block BLACK_BARREL = new VariantBarrelBlock();
+    public static final Block BLUE_BARREL = new VariantBarrelBlock();
+    public static final Block BROWN_BARREL = new VariantBarrelBlock();
+    public static final Block CYAN_BARREL = new VariantBarrelBlock();
+    public static final Block GRAY_BARREL = new VariantBarrelBlock();
+    public static final Block GREEN_BARREL = new VariantBarrelBlock();
+    public static final Block LIGHT_BLUE_BARREL = new VariantBarrelBlock();
+    public static final Block LIGHT_GRAY_BARREL = new VariantBarrelBlock();
+    public static final Block LIME_BARREL = new VariantBarrelBlock();
+    public static final Block MAGENTA_BARREL = new VariantBarrelBlock();
+    public static final Block ORANGE_BARREL = new VariantBarrelBlock();
+    public static final Block PINK_BARREL = new VariantBarrelBlock();
+    public static final Block PURPLE_BARREL = new VariantBarrelBlock();
+    public static final Block RED_BARREL = new VariantBarrelBlock();
+    public static final Block WHITE_BARREL = new VariantBarrelBlock();
+    public static final Block YELLOW_BARREL = new VariantBarrelBlock();
 
 
     @Override
@@ -70,6 +87,27 @@ public class Init implements ModInitializer {
             registerBarrelBlock(DARK_AMARANTH_BARREL, "dark_amaranth_barrel", true);
             registerBarrelBlock(PALM_BARREL, "palm_barrel", true);
             LOGGER.info("Promenade detected, creating Crafting Tables from Promenade Planks");
+        }
+
+        // Spectrum Items
+        if (FabricLoader.getInstance().isModLoaded("spectrum")) {
+            registerBarrelBlock(BLACK_BARREL, "black_barrel", true);
+            registerBarrelBlock(BLUE_BARREL, "blue_barrel", true);
+            registerBarrelBlock(BROWN_BARREL, "brown_barrel", true);
+            registerBarrelBlock(CYAN_BARREL, "cyan_barrel", true);
+            registerBarrelBlock(GRAY_BARREL, "gray_barrel", true);
+            registerBarrelBlock(GREEN_BARREL, "green_barrel", true);
+            registerBarrelBlock(LIGHT_BLUE_BARREL, "light_blue_barrel", true);
+            registerBarrelBlock(LIGHT_GRAY_BARREL, "light_gray_barrel", true);
+            registerBarrelBlock(LIME_BARREL, "lime_barrel", true);
+            registerBarrelBlock(MAGENTA_BARREL, "magenta_barrel", true);
+            registerBarrelBlock(ORANGE_BARREL, "orange_barrel", true);
+            registerBarrelBlock(PINK_BARREL, "pink_barrel", true);
+            registerBarrelBlock(PURPLE_BARREL, "purple_barrel", true);
+            registerBarrelBlock(RED_BARREL, "red_barrel", true);
+            registerBarrelBlock(WHITE_BARREL, "white_barrel", true);
+            registerBarrelBlock(YELLOW_BARREL, "yellow_barrel", true);
+            LOGGER.info("Spectrum detected, creating Crafting Tables from Spectrum Planks");
         }
 
 
