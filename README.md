@@ -1,5 +1,5 @@
 # Variant Barrels
-<a href="https:/www.curseforge.com/minecraft/mc-mods/variant-barrels-fabric"><img src="https://cf.way2muchnoise.eu/full_variant-barrels-fabric_downloads.svg">
+<a href="http:/www.curseforge.com/minecraft/mc-mods/variant-barrels-fabric"><img src="http://cf.way2muchnoise.eu/full_variant-barrels-fabric_downloads.svg">
  <img src="http://cf.way2muchnoise.eu/versions/variant-barrels-fabric.svg"></a>
  </p>
 
