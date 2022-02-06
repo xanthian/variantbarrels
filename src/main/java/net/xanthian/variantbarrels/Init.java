@@ -51,8 +51,8 @@ public class Init implements ModInitializer {
 
         // Disable Nether barrels if Better Nether is installed
         if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            registerBarrelBlock(CRIMSON_BARREL, "crimson_barrel", true);
-            registerBarrelBlock(WARPED_BARREL, "warped_barrel", true);
+            registerBarrelBlock(CRIMSON_BARREL, "crimson_barrel", false);
+            registerBarrelBlock(WARPED_BARREL, "warped_barrel", false);
         }
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             LOGGER.info("Better Nether detected, removing Barrels from Variant Barrels");
