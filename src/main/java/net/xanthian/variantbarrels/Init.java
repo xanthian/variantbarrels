@@ -49,6 +49,12 @@ public class Init implements ModInitializer {
     public static final Block RED_BARREL = new VariantBarrelBlock();
     public static final Block WHITE_BARREL = new VariantBarrelBlock();
     public static final Block YELLOW_BARREL = new VariantBarrelBlock();
+    // Bewitchment
+    public static final Block CYPRESS_BARREL = new VariantBarrelBlock();
+    public static final Block ELDER_BARREL = new VariantBarrelBlock();
+    public static final Block DRAGONS_BLOOD_BARREL = new VariantBarrelBlock();
+    public static final Block JUNIPER_BARREL = new VariantBarrelBlock();
+
 
 
     @Override
@@ -65,7 +71,6 @@ public class Init implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded("blockus")) {
             LOGGER.info("Blockus detected, removing Barrels from Variant Barrels");
         }
-
         // Disable Nether barrels if Better Nether is installed
         if (!FabricLoader.getInstance().isModLoaded("betternether")) {
             registerBarrelBlock(CRIMSON_BARREL, "crimson_barrel", false);
@@ -74,22 +79,19 @@ public class Init implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             LOGGER.info("Better Nether detected, removing Barrels from Variant Barrels");
         }
-
         // Tech Reborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             registerBarrelBlock(RUBBER_BARREL, "rubber_barrel", true);
             LOGGER.info("Tech Reborn detected, creating Crafting Tables from Tech Reborn Planks");
         }
-
-        // Promenade Items
+        // Promenade
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
             registerBarrelBlock(CHERRY_OAK_BARREL, "cherry_oak_barrel", true);
             registerBarrelBlock(DARK_AMARANTH_BARREL, "dark_amaranth_barrel", true);
             registerBarrelBlock(PALM_BARREL, "palm_barrel", true);
             LOGGER.info("Promenade detected, creating Crafting Tables from Promenade Planks");
         }
-
-        // Spectrum Items
+        // Spectrum
         if (FabricLoader.getInstance().isModLoaded("spectrum")) {
             registerBarrelBlock(BLACK_BARREL, "black_barrel", true);
             registerBarrelBlock(BLUE_BARREL, "blue_barrel", true);
@@ -109,9 +111,14 @@ public class Init implements ModInitializer {
             registerBarrelBlock(YELLOW_BARREL, "yellow_barrel", true);
             LOGGER.info("Spectrum detected, creating Crafting Tables from Spectrum Planks");
         }
-
-
-
+        // Bewitchment
+        if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
+            registerBarrelBlock(CYPRESS_BARREL, "cypress_barrel", true);
+            registerBarrelBlock(ELDER_BARREL, "elder_barrel", true);
+            registerBarrelBlock(DRAGONS_BLOOD_BARREL, "dragons_blood_barrel", true);
+            registerBarrelBlock(JUNIPER_BARREL, "juniper_barrel", true);
+            LOGGER.info("Bewitchment detected, creating Crafting Tables from Bewitchment Planks");
+        }
     }
     private void registerBarrelBlock(Block Barrel, String name, boolean canBurn) {
 

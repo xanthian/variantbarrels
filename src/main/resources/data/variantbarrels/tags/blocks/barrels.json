@@ -27,6 +27,10 @@
     {"id":"variantbarrels:purple_barrel", "required": false},
     {"id":"variantbarrels:red_barrel", "required": false},
     {"id":"variantbarrels:white_barrel", "required": false},
-    {"id":"variantbarrels:yellow_barrel", "required": false}
+    {"id":"variantbarrels:yellow_barrel", "required": false},
+    {"id":"variantbarrels:cypress_barrel", "required": false},
+    {"id":"variantbarrels:elder_barrel", "required": false},
+    {"id":"variantbarrels:dragons_blood_barrel", "required": false},
+    {"id":"variantbarrels:juniper_barrel", "required": false}
   ]
 }
