@@ -9,10 +9,24 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.variantbarrels.block.VariantBarrelBlock;
+import net.xanthian.variantbarrels.util.Recipes;
+import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Init implements ModInitializer {
+
+    public static final List<Pair<String, String[]>> woodTypes = Arrays.asList(
+            Pair.of("acacia", new String[0]),
+            Pair.of("birch", new String[0]),
+            Pair.of("crimson", new String[0]),
+            Pair.of("dark_oak", new String[0]),
+            Pair.of("jungle", new String[0]),
+            Pair.of("oak", new String[0]),
+            Pair.of("warped", new String[0]));
 
     public static final String MOD_ID = "variantbarrels";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
