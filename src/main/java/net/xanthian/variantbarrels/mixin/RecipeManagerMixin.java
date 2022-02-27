@@ -14,11 +14,11 @@ import net.xanthian.variantbarrels.Init;
 import net.xanthian.variantbarrels.util.Recipes;
 import org.apache.commons.lang3.tuple.Pair;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.*;
 
@@ -29,36 +29,29 @@ public abstract class RecipeManagerMixin {
     private <C extends Inventory, T extends Recipe<C>> Map<Identifier, Recipe<C>> getAllOfType(RecipeType<T> type) {
         return null;
     }
-
-    @Shadow
-    private Map<RecipeType<?>, Map<Identifier, Recipe<?>>> recipes;
-
     /**
-     * @author Paulevs
+     * @author Paulevs (amended by Xanthian)
      */
-    @Overwrite
-    public <C extends Inventory, T extends Recipe<C>> Optional<T> getFirstMatch(RecipeType<T> type, C inventory, World world) {
+    @Inject(method = "getFirstMatch", at = @At(value = "HEAD"), cancellable = true)
+    private <C extends Inventory, T extends Recipe<C>> void getFirstMatch(RecipeType<T> type, C inventory, World world, CallbackInfoReturnable<Optional<T>> info) {
         Map<Identifier, Recipe<C>> typeMap = getAllOfType(type);
-        if (typeMap == null)
-        {
-            return null;
-        }
         Collection<Recipe<C>> values = typeMap.values();
         List<Recipe<C>> list = new ArrayList<>(values);
-        String mc = new Identifier("").getNamespace();
-
         list.sort((v1, v2) -> {
-            boolean b1 = v1.getId().getNamespace().equals(mc);
-            return (b1 ^ v2.getId().getNamespace().equals(mc)) ? (b1 ? 1 : -1) : 0;
+            boolean b1 = v1.getId().getNamespace().equals("minecraft");
+            boolean b2 = v2.getId().getNamespace().equals("minecraft");
+            return b1 ^ b2 ? (b1 ? 1 : -1) : 0;
         });
-        return list.stream().flatMap((recipe -> Util.stream(type.match(recipe, world, inventory)))).findFirst();
-
+        info.setReturnValue(list.stream().flatMap((recipe -> Util.stream(type.match(recipe, world, inventory)))).findFirst());
     }
 
     @Inject(method = "apply", at = @At("HEAD"))
     public void interceptApply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo info) {
         for (Pair<String, String[]> woodType : Init.woodTypes) {
             map.put(new Identifier(Init.MOD_ID, woodType.getLeft() + "_barrel"), Recipes.createVanillaBarrelRecipeJson(woodType.getLeft(), woodType.getRight()));
-         }
+        }
+        for (Pair<String, String[]> woodType : Init.plankwoodTypes) {
+            map.put(new Identifier(Init.MOD_ID, woodType.getLeft() + "_barrel"), Recipes.createUghBarrelRecipeJson(woodType.getLeft(), woodType.getRight()));
+        }
     }
 }

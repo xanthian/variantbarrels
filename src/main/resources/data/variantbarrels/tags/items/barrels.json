@@ -9,6 +9,8 @@
     {"id":"variantbarrels:oak_barrel","required": false},
     {"id":"variantbarrels:warped_barrel","required": false},
     {"id":"variantbarrels:rubber_barrel", "required": false},
+    {"id":"variantbarrels:mangrove_barrel", "required": false},
+    {"id":"variantbarrels:wisteria_barrel", "required": false},
     {"id":"variantbarrels:cherry_oak_barrel", "required": false},
     {"id":"variantbarrels:dark_amaranth_barrel", "required": false},
     {"id":"variantbarrels:palm_barrel", "required": false},

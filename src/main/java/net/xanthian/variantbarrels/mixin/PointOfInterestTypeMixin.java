@@ -64,7 +64,9 @@ public abstract class PointOfInterestTypeMixin
                 Init.CYPRESS_BARREL,
                 Init.ELDER_BARREL,
                 Init.DRAGONS_BLOOD_BARREL,
-                Init.JUNIPER_BARREL
+                Init.JUNIPER_BARREL,
+                Init.MANGROVE_BARREL,
+                Init.WISTERIA_BARREL
 
         ).stream().flatMap((block) -> {
             return block.getStateManager().getStates().stream();

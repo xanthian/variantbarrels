@@ -5,31 +5,21 @@
 
   "name": "Variant Barrels",
   "description": "Barrels for all wood types, for your decoration needs!",
-  "authors": [
-    "Xanthian"
-  ],
+  "authors": ["Xanthian"],
   "contact": {
     "sources": "https://github.com/xanthian/variantbarrels"
   },
   "license": "CC0-1.0",
   "icon": "assets/icon.png",
-
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.xanthian.variantbarrels.Init"
-    ]
+    "main": ["net.xanthian.variantbarrels.Init"]
   },
-  "mixins": [
-    "variantbarrels.mixins.json"
-  ],
+  "mixins": ["variantbarrels.mixins.json"],
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": ">=0.46.0",
     "minecraft": "1.18.x",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
