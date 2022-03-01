@@ -22,8 +22,6 @@ import java.util.*;
 @Mixin(RecipeManager.class)
 public abstract class RecipeManagerMixin {
 
-
-
     @Inject(method = "apply", at = @At("HEAD"))
     public void interceptApply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo info) {
         for (Pair<String, String[]> woodType : Init.woodTypes) {

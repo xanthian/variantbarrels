@@ -4,8 +4,7 @@
   "package": "net.xanthian.variantbarrels.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "RecipeManagerMixin",
-    "PointOfInterestTypeMixin"
+    "RecipeManagerMixin"
   ],
   "injectors": {
     "defaultRequire": 1
