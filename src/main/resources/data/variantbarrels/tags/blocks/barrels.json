@@ -33,6 +33,8 @@
     {"id":"variantbarrels:cypress_barrel", "required": false},
     {"id":"variantbarrels:elder_barrel", "required": false},
     {"id":"variantbarrels:dragons_blood_barrel", "required": false},
-    {"id":"variantbarrels:juniper_barrel", "required": false}
+    {"id":"variantbarrels:juniper_barrel", "required": false},
+    {"id":"variantbarrels:stripped_bamboo_barrel", "required": false}
+
   ]
 }

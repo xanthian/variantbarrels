@@ -49,5 +49,8 @@
   "block.variantbarrels.cypress_barrel": "Cypress Barrel",
   "block.variantbarrels.elder_barrel": "Elder Barrel",
   "block.variantbarrels.dragons_blood_barrel": "Dragons Blood Barrel",
-  "block.variantbarrels.juniper_barrel": "Juniper Barrel"
+  "block.variantbarrels.juniper_barrel": "Juniper Barrel",
+
+  "_comment8": "Twigs",
+  "block.variantbarrels.stripped_bamboo_barrel": "Stripped Bamboo Barrel"
 }

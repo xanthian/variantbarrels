@@ -114,5 +114,12 @@ public class Init implements ModInitializer {
             woodTypes.add(Pair.of("juniper", new String[]{"bewitchment"}));
             LOGGER.info("Bewitchment detected, creating Barrels from Bewitchment Planks");
         }
+        // Twigs
+        if (FabricLoader.getInstance().isModLoaded("twigs")) {
+            Barrels.registerTwigsBarrels();
+            woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
+            LOGGER.info("Twigs detected, creating Barrels from Twigs Planks");
+        }
+
     }
 }
