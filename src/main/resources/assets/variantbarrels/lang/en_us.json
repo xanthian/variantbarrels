@@ -52,5 +52,12 @@
   "block.variantbarrels.juniper_barrel": "Juniper Barrel",
 
   "_comment8": "Twigs",
-  "block.variantbarrels.stripped_bamboo_barrel": "Stripped Bamboo Barrel"
+  "block.variantbarrels.stripped_bamboo_barrel": "Stripped Bamboo Barrel",
+
+  "_comment9": "Botania",
+  "block.variantbarrels.dreamwood_barrel": "Dreamwood Barrel",
+  "block.variantbarrels.livingwood_barrel": "Livingwood Barrel",
+  "block.variantbarrels.mossy_dreamwood_barrel": "Mossy Dreamwood Barrel",
+  "block.variantbarrels.mossy_livingwood_barrel": "Mossy Livingwood Barrel",
+  "block.variantbarrels.shimmerwood_barrel": "Shimmerwood Barrel"
 }

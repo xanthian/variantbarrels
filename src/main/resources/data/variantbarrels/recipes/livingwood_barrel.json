@@ -1,0 +1,27 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botania"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "key": {
+    "P": {
+      "item": "botania:livingwood_planks"
+    },
+    "S": {
+      "item": "botania:livingwood_planks_slab"
+    }
+  },
+  "result": {
+    "item": "variantbarrels:livingwood_barrel"
+  }
+}

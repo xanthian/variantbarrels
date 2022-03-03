@@ -34,6 +34,11 @@
     {"id":"variantbarrels:elder_barrel", "required": false},
     {"id":"variantbarrels:dragons_blood_barrel", "required": false},
     {"id":"variantbarrels:juniper_barrel", "required": false},
-    {"id":"variantbarrels:stripped_bamboo_barrel", "required": false}
+    {"id":"variantbarrels:stripped_bamboo_barrel", "required": false},
+    {"id":"variantbarrels:dreamwood_barrel", "required": false},
+    {"id":"variantbarrels:livingwood_barrel", "required": false},
+    {"id":"variantbarrels:mossy_dreamwood_barrel", "required": false},
+    {"id":"variantbarrels:mossy_livingwood_barrel", "required": false},
+    {"id":"variantbarrels:shimmerwood_barrel", "required": false}
   ]
 }

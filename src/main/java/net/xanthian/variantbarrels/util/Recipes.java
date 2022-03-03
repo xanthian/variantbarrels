@@ -8,7 +8,6 @@ import static net.xanthian.variantbarrels.Init.*;
 
 public class Recipes {
 
-
     // Vanilla
     public static JsonObject createVanillaBarrelRecipeJson(String material, String[] mods) {
         Gson gson = new Gson();
@@ -51,7 +50,7 @@ public class Recipes {
         return json;
     }
 
-    // Annoying mod that prefixes slab with _plank
+    // Annoying mods that prefixes slab with _plank
     public static JsonObject createUghBarrelRecipeJson(String material, String[] mods) {
         Gson gson = new Gson();
         JsonArray modList = gson.toJsonTree(mods).getAsJsonArray();

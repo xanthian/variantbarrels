@@ -1,39 +1,41 @@
 package net.xanthian.variantbarrels;
 
 import com.google.common.collect.Lists;
+
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.loader.api.FabricLoader;
+
 import net.minecraft.block.Block;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
+
 import net.xanthian.variantbarrels.block.Barrels;
-import net.xanthian.variantbarrels.block.VariantBarrelBlock;
+
 import org.apache.commons.lang3.tuple.Pair;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Init implements ModInitializer {
 
+    @Override
+    public void onInitialize() {
+        Barrels.registerAllBarrels();
+    }
 
-    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList(
-        );
-    public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList(
-        );
-
+    public static final List<Block> REGISTERED_BARRELS = new ArrayList<Block>();
+    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
+    public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList();
     public static final String MOD_ID = "variantbarrels";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    @Override
-    public void onInitialize() {
 
-            // Disable Vanilla barrels if Blockus is installed
+    public static void populateBarrelsList() {
+
+        // Disable Vanilla barrels if Blockus is installed
         if (!FabricLoader.getInstance().isModLoaded("blockus")) {
-            Barrels.registerVanillaBarrels();
+            Barrels.addVanillaBarrels();
             woodTypes.add(Pair.of("acacia", new String[0]));
             woodTypes.add(Pair.of("birch", new String[0]));
             woodTypes.add(Pair.of("dark_oak", new String[0]));
@@ -46,7 +48,7 @@ public class Init implements ModInitializer {
 
         // Disable Nether barrels if Better Nether is installed
         if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            Barrels.registerNetherBarrels();
+            Barrels.addNetherBarrels();
             woodTypes.add(Pair.of("crimson", new String[0]));
             woodTypes.add(Pair.of("warped", new String[0]));
         }
@@ -55,28 +57,28 @@ public class Init implements ModInitializer {
         }
         // Tech Reborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-            Barrels.registerTechRebornBarrels();
+            Barrels.addTechRebornBarrels();
             plankwoodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             LOGGER.info("Tech Reborn detected, creating Barrels from Tech Reborn Planks");
         }
 
         // The Wild Mod
         if (FabricLoader.getInstance().isModLoaded("twm")) {
-            Barrels.registerTheWildModBarrels();
+            Barrels.addTheWildModBarrels();
             woodTypes.add(Pair.of("mangrove", new String[]{"twm"}));
             LOGGER.info("The Wild Mod detected, creating Barrels from The Wild Mod Planks");
         }
 
         // Wilder World
         if (FabricLoader.getInstance().isModLoaded("wilderworld")) {
-            Barrels.registerWilderWorldBarrels();
+            Barrels.addWilderWorldBarrels();
             woodTypes.add(Pair.of("wisteria", new String[]{"wilderworld"}));
             LOGGER.info("Wilder World detected, creating Barrels from Wilder World Planks");
         }
 
         // Promenade
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
-            Barrels.registerPromenadeBarrels();
+            Barrels.addPromenadeBarrels();
             woodTypes.add(Pair.of("cherry_oak", new String[]{"promenade"}));
             woodTypes.add(Pair.of("dark_amaranth", new String[]{"promenade"}));
             woodTypes.add(Pair.of("palm", new String[]{"promenade"}));
@@ -85,7 +87,7 @@ public class Init implements ModInitializer {
 
         // Spectrum
         if (FabricLoader.getInstance().isModLoaded("spectrum")) {
-            Barrels.registerSpectrumBarrels();
+            Barrels.addSpectrumBarrels();
             plankwoodTypes.add(Pair.of("black", new String[]{"spectrum"}));
             plankwoodTypes.add(Pair.of("blue", new String[]{"spectrum"}));
             plankwoodTypes.add(Pair.of("brown", new String[]{"spectrum"}));
@@ -104,10 +106,9 @@ public class Init implements ModInitializer {
             plankwoodTypes.add(Pair.of("yellow", new String[]{"spectrum"}));
             LOGGER.info("Spectrum detected, creating Barrels from Spectrum Planks");
          }
-
         // Bewitchment
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
-            Barrels.registerBewitchmentBarrels();
+            Barrels.addBewitchmentBarrels();
             woodTypes.add(Pair.of("cypress", new String[]{"bewitchment"}));
             woodTypes.add(Pair.of("elder", new String[]{"bewitchment"}));
             woodTypes.add(Pair.of("dragons_blood", new String[]{"bewitchment"}));
@@ -116,10 +117,20 @@ public class Init implements ModInitializer {
         }
         // Twigs
         if (FabricLoader.getInstance().isModLoaded("twigs")) {
-            Barrels.registerTwigsBarrels();
+            Barrels.addTwigsBarrels();
             woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
             LOGGER.info("Twigs detected, creating Barrels from Twigs Planks");
         }
-
+        // Botania
+        if (!FabricLoader.getInstance().isModLoaded("botania")) {
+            Barrels.addBotaniaBarrels();
+            // Leaving this here in case Botania changes block names
+            //plankwoodTypes.add(Pair.of("dreamwood", new String[]{"botania"}));
+            //plankwoodTypes.add(Pair.of("livingwood", new String[]{"botania"}));
+            //plankwoodTypes.add(Pair.of("mossy_dreamwood", new String[]{"botania"}));
+            //plankwoodTypes.add(Pair.of("mossy_livingwood", new String[]{"botania"}));
+            //plankwoodTypes.add(Pair.of("shimmerwood", new String[]{"botania"}));
+            LOGGER.info("Botania detected, creating Barrels from Botania Planks");
+        }
     }
 }
