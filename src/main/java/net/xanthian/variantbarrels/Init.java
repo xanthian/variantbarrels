@@ -122,7 +122,7 @@ public class Init implements ModInitializer {
             LOGGER.info("Twigs detected, creating Barrels from Twigs Planks");
         }
         // Botania
-        if (!FabricLoader.getInstance().isModLoaded("botania")) {
+        if (FabricLoader.getInstance().isModLoaded("botania")) {
             Barrels.addBotaniaBarrels();
             // Leaving this here in case Botania changes block names
             //plankwoodTypes.add(Pair.of("dreamwood", new String[]{"botania"}));

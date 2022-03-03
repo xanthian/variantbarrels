@@ -6,6 +6,11 @@
 ## Barrels for all wood types
 
 #### Mod compatibility included
-v1 - Tech Reborn, Promenade
+v1.0 - Tech Reborn & Promenade
+v1.1 - Spectrum
+v1.2 - Bewitchment
+v1.3 - The Wild Mod & Wilder World
+v1.3.5 - Twigs
+v1.4 - Botania
 
 ![image](https://user-images.githubusercontent.com/7688001/152662619-f63b1c49-8b6f-4b4c-9f3a-9f9e405b1f7e.png)
