@@ -1,10 +1,16 @@
 {
-  "fabric:load_conditions": [
+  "fabric:load_conditions":
+  [
     {
-      "condition": "fabric:all_mods_loaded",
-      "values": [
-        "twm"
-      ]
+      "condition": "fabric:not",
+      "value":
+      {
+        "condition": "fabric:all_mods_loaded",
+        "values":
+        [
+          "blockus"
+        ]
+      }
     }
   ],
   "type": "minecraft:block",

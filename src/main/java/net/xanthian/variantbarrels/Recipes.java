@@ -1,10 +1,10 @@
-package net.xanthian.variantbarrels.util;
+package net.xanthian.variantbarrels;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
-import static net.xanthian.variantbarrels.Init.*;
+import static net.xanthian.variantbarrels.Initialise.*;
 
 public class Recipes {
 

@@ -10,14 +10,15 @@
   "block.variantbarrels.jungle_barrel": "Jungle Barrel",
   "block.variantbarrels.oak_barrel": "Oak Barrel",
   "block.minecraft.barrel": "Spruce Barrel",
+  "block.variantbarrels.mangrove_barrel": "Mangrove Barrel",
   "block.variantbarrels.crimson_barrel": "Crimson Barrel",
   "block.variantbarrels.warped_barrel": "Warped Barrel",
 
   "_comment2": "Tech Reborn",
   "block.variantbarrels.rubber_barrel": "Rubber Barrel",
 
-  "_comment3": "The Wild Mod",
-  "block.variantbarrels.mangrove_barrel": "Mangrove Barrel",
+  "_comment3": "",
+
 
   "_comment4": "Wilder World",
   "block.variantbarrels.wisteria_barrel": "Wisteria Barrel",

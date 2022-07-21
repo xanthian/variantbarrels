@@ -5,8 +5,6 @@ import com.google.common.collect.Lists;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
-import net.minecraft.block.Block;
-
 import net.xanthian.variantbarrels.block.Barrels;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -14,25 +12,17 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Init implements ModInitializer {
+public class Initialise implements ModInitializer {
+
+    public static final String MOD_ID = "variantbarrels";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
+    public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList();
 
     @Override
     public void onInitialize() {
-        Barrels.registerAllBarrels();
-    }
-
-    public static final List<Block> REGISTERED_BARRELS = new ArrayList<Block>();
-    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
-    public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList();
-    public static final String MOD_ID = "variantbarrels";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-
-
-    public static void populateBarrelsList() {
-
         // Disable Vanilla barrels if Blockus is installed
         if (!FabricLoader.getInstance().isModLoaded("blockus")) {
             Barrels.addVanillaBarrels();
@@ -41,6 +31,7 @@ public class Init implements ModInitializer {
             woodTypes.add(Pair.of("dark_oak", new String[0]));
             woodTypes.add(Pair.of("jungle", new String[0]));
             woodTypes.add(Pair.of("oak", new String[0]));
+            woodTypes.add(Pair.of("mangrove", new String[0]));
         }
         if (FabricLoader.getInstance().isModLoaded("blockus")) {
             LOGGER.info("Blockus detected, removing Barrels from Variant Barrels");
@@ -60,13 +51,6 @@ public class Init implements ModInitializer {
             Barrels.addTechRebornBarrels();
             plankwoodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             LOGGER.info("Tech Reborn detected, creating Barrels from Tech Reborn Planks");
-        }
-
-        // The Wild Mod
-        if (FabricLoader.getInstance().isModLoaded("twm")) {
-            Barrels.addTheWildModBarrels();
-            woodTypes.add(Pair.of("mangrove", new String[]{"twm"}));
-            LOGGER.info("The Wild Mod detected, creating Barrels from The Wild Mod Planks");
         }
 
         // Wilder World
@@ -105,7 +89,7 @@ public class Init implements ModInitializer {
             plankwoodTypes.add(Pair.of("white", new String[]{"spectrum"}));
             plankwoodTypes.add(Pair.of("yellow", new String[]{"spectrum"}));
             LOGGER.info("Spectrum detected, creating Barrels from Spectrum Planks");
-         }
+        }
         // Bewitchment
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
             Barrels.addBewitchmentBarrels();
