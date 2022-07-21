@@ -49,7 +49,7 @@ public class Initialise implements ModInitializer {
         // Tech Reborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             Barrels.addTechRebornBarrels();
-            plankwoodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
+            woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             LOGGER.info("Tech Reborn detected, creating Barrels from Tech Reborn Planks");
         }
 
