@@ -116,5 +116,21 @@ public class Initialise implements ModInitializer {
             //plankwoodTypes.add(Pair.of("shimmerwood", new String[]{"botania"}));
             LOGGER.info("Botania detected, creating Barrels from Botania Planks");
         }
+
+        // Croptopia
+        if (FabricLoader.getInstance().isModLoaded("croptopia")) {
+            Barrels.addCroptopiaBarrels();
+            woodTypes.add(Pair.of("cinnamon", new String[]{"croptopia"}));
+            LOGGER.info("Croptopia detected, creating Barrels from Croptopia Planks");
+        }
+
+        // Epic Paladins (Arclight)
+        if (FabricLoader.getInstance().isModLoaded("arclight")) {
+            Barrels.addEpicPaladinsBarrels();
+            woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
+            woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
+            woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
+            LOGGER.info("Epic Paladins detected, creating Barrels from Epic Paladins Planks");
+        }
     }
 }

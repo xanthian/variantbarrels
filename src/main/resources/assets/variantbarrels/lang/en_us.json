@@ -60,5 +60,13 @@
   "block.variantbarrels.livingwood_barrel": "Livingwood Barrel",
   "block.variantbarrels.mossy_dreamwood_barrel": "Mossy Dreamwood Barrel",
   "block.variantbarrels.mossy_livingwood_barrel": "Mossy Livingwood Barrel",
-  "block.variantbarrels.shimmerwood_barrel": "Shimmerwood Barrel"
+  "block.variantbarrels.shimmerwood_barrel": "Shimmerwood Barrel",
+
+  "_comment10": "Croptopia",
+  "block.variantbarrels.cinnamon_barrel": "Cinnamon Barrel",
+
+  "_comment11": "Epic Paladins",
+  "block.variantbarrels.jade_barrel": "Jade Birch Barrel",
+  "block.variantbarrels.moon_barrel": "Moon Barrel",
+  "block.variantbarrels.shadow_barrel": "Shadow Barrel"
 }

@@ -1,8 +1,11 @@
 package net.xanthian.variantbarrels.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
+import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -78,6 +81,15 @@ public class Barrels {
         BarrelBlock MOSSY_DREAMWOOD_BARREL = new BarrelBlock(); registerBarrelBlock("mossy_dreamwood_barrel", MOSSY_DREAMWOOD_BARREL, true);
         BarrelBlock MOSSY_LIVINGWOOD_BARREL = new BarrelBlock();registerBarrelBlock("mossy_livingwood_barrel", MOSSY_LIVINGWOOD_BARREL, true);
         BarrelBlock SHIMMERWOOD_BARREL = new BarrelBlock();     registerBarrelBlock("shimmerwood_barrel", SHIMMERWOOD_BARREL, true);
+    }
+    public static void addCroptopiaBarrels() {
+        BarrelBlock CINNAMON_BARREL = new BarrelBlock();        registerBarrelBlock("cinnamon_barrel", CINNAMON_BARREL, true);
+    }
+    
+    public static void addEpicPaladinsBarrels() {
+        BarrelBlock JADE_BARREL = new BarrelBlock();            registerBarrelBlock("jade_barrel", JADE_BARREL, true);
+        BarrelBlock MOON_BARREL = new BarrelBlock();            registerBarrelBlock("moon_barrel", MOON_BARREL, true);
+        BarrelBlock SHADOW_BARREL = new BarrelBlock();          registerBarrelBlock("shadow_barrel", SHADOW_BARREL, true);
     }
 
     private static void registerBarrelBlock(String Id, Block block, boolean canBurn) {
