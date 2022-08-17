@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.profiler.Profiler;
 
 import net.xanthian.variantbarrels.Initialise;
-import net.xanthian.variantbarrels.Recipes;
+import net.xanthian.variantbarrels.util.Recipes;
 
 import org.apache.commons.lang3.tuple.Pair;
 

@@ -4,10 +4,10 @@
   "version": "${version}",
 
   "name": "Variant Barrels",
-  "description": "Barrels for all wood types, for your decoration needs!",
+  "description": "Barrels for all wood types",
   "authors": ["Xanthian"],
   "contact": {"sources": "https://github.com/xanthian/variantbarrels"},
-  "license": "CC0-1.0",
+  "license": "MIT",
   "icon": "assets/icon.png",
   "environment": "*",
   "entrypoints": {

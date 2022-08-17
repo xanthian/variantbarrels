@@ -1,4 +1,4 @@
-package net.xanthian.variantbarrels;
+package net.xanthian.variantbarrels.util;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

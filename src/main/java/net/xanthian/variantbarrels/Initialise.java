@@ -3,8 +3,13 @@ package net.xanthian.variantbarrels;
 import com.google.common.collect.Lists;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.util.Identifier;
 import net.xanthian.variantbarrels.block.Barrels;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -20,6 +25,8 @@ public class Initialise implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
     public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList();
+    public static final ItemGroup VARIANTBARRELS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variantbarrels"),
+            () -> new ItemStack(Items.BARREL));
 
     @Override
     public void onInitialize() {
@@ -131,6 +138,10 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
             woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
             LOGGER.info("Epic Paladins detected, creating Barrels from Epic Paladins Planks");
+        }
+        if (FabricLoader.getInstance().isModLoaded("simplemango")) {
+            Barrels.addSimpleMangoBarrels();
+            woodTypes.add(Pair.of("mango", new String[]{"simplemango"}));
         }
     }
 }

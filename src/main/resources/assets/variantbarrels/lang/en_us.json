@@ -68,5 +68,8 @@
   "_comment11": "Epic Paladins",
   "block.variantbarrels.jade_barrel": "Jade Birch Barrel",
   "block.variantbarrels.moon_barrel": "Moon Barrel",
-  "block.variantbarrels.shadow_barrel": "Shadow Barrel"
+  "block.variantbarrels.shadow_barrel": "Shadow Barrel",
+
+  "": "Simple Mango",
+  "block.variantbarrels.mango_barrel": "Mango Barrel"
 }
