@@ -44,6 +44,7 @@
     {"id":"variantbarrels:jade_barrel", "required": false},
     {"id":"variantbarrels:moon_barrel", "required": false},
     {"id":"variantbarrels:shadow_barrel", "required": false},
-    {"id":"variantbarrels:mango_barrel", "required": false}
+    {"id":"variantbarrels:mango_barrel", "required": false},
+    {"id":"variantbarrels:fir_barrel", "required": false}
   ]
 }

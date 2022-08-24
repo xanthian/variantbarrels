@@ -70,6 +70,9 @@
   "block.variantbarrels.moon_barrel": "Moon Barrel",
   "block.variantbarrels.shadow_barrel": "Shadow Barrel",
 
-  "": "Simple Mango",
-  "block.variantbarrels.mango_barrel": "Mango Barrel"
+  "_comment12": "Simple Mango",
+  "block.variantbarrels.mango_barrel": "Mango Barrel",
+
+  "_comment13": "Traverse",
+  "block.variantbarrels.fir_barrel": "Fir Barrel"
 }
