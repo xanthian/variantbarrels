@@ -73,22 +73,22 @@ public class Initialise implements ModInitializer {
         // Spectrum
         if (FabricLoader.getInstance().isModLoaded("spectrum")) {
             Barrels.addSpectrumBarrels();
-            plankwoodTypes.add(Pair.of("black", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("blue", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("brown", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("cyan", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("gray", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("green", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("light_blue", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("light_gray", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("lime", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("magenta", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("orange", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("pink", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("purple", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("red", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("white", new String[]{"spectrum"}));
-            plankwoodTypes.add(Pair.of("yellow", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("black", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("blue", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("brown", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("cyan", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("gray", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("green", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("light_blue", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("light_gray", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("lime", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("magenta", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("orange", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("pink", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("purple", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("red", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("white", new String[]{"spectrum"}));
+            woodTypes.add(Pair.of("yellow", new String[]{"spectrum"}));
         }
         // Bewitchment
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
