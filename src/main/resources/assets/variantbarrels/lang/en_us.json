@@ -74,5 +74,16 @@
   "block.variantbarrels.mango_barrel": "Mango Barrel",
 
   "_comment13": "Traverse",
-  "block.variantbarrels.fir_barrel": "Fir Barrel"
+  "block.variantbarrels.fir_barrel": "Fir Barrel",
+
+  "_comment14": "Terrestria",
+  "block.variantbarrels.cypress_barrel2": "Cypress Barrel",
+  "block.variantbarrels.hemlock_barrel": "Hemlock Barrel",
+  "block.variantbarrels.japanese_maple_barrel": "Japanese Maple Barrel",
+  "block.variantbarrels.rainbow_eucalyptus_barrel": "Rainbow Eucalyptus Barrel",
+  "block.variantbarrels.redwood_barrel": "Redwood Barrel",
+  "block.variantbarrels.rubber_barrel2": "Rubber Barrel",
+  "block.variantbarrels.sakura_barrel": "Sakura Barrel",
+  "block.variantbarrels.willow_barrel": "Willow Barrel",
+  "block.variantbarrels.yucca_palm_barrel": "Yucca Palm Barrel"
 }

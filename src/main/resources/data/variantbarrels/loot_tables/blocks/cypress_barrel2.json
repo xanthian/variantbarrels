@@ -3,7 +3,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "twigs"
+        "terrestria"
       ]
     }
   ],
@@ -14,7 +14,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "variantbarrels:stripped_bamboo_barrel"
+          "name": "variantbarrels:cypress_barrel2"
         }
       ],
       "conditions": [

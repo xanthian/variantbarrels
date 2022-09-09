@@ -1,6 +1,7 @@
 package net.xanthian.variantbarrels.block;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
@@ -8,7 +9,7 @@ import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public class VariantBarrelBlock extends net.minecraft.block.BarrelBlock {
+public class VariantBarrelBlock extends BarrelBlock {
 
     public static final TagKey<Block> FISHERMAN_WORKSTATION = TagKey.of(Registry.BLOCK_KEY, new Identifier("c", "workstation/fisherman"));
     public static final TagKey<Block> BARREL = TagKey.of(Registry.BLOCK_KEY, new Identifier("c", "barrel"));

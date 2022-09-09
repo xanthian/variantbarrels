@@ -82,6 +82,18 @@ public class Barrels {
     public static void addTraverseBarrels() {
         VariantBarrelBlock FIR_BARREL = new VariantBarrelBlock(); registerBarrelBlock("fir_barrel", FIR_BARREL, true);
     }
+    public static void addTerrestriaBarrels() {
+        VariantBarrelBlock CYPRESS_BARREL2 = new VariantBarrelBlock(); registerBarrelBlock("cypress_barrel2", CYPRESS_BARREL2, true);
+        VariantBarrelBlock HEMLOCK_BARREL = new VariantBarrelBlock(); registerBarrelBlock("hemlock_barrel", HEMLOCK_BARREL, true);
+        VariantBarrelBlock JAPANESE_MAPLE_BARREL = new VariantBarrelBlock(); registerBarrelBlock("japanese_maple_barrel", JAPANESE_MAPLE_BARREL, true);
+        VariantBarrelBlock RAINBOW_EUCALYPTUS_BARREL = new VariantBarrelBlock(); registerBarrelBlock("rainbow_eucalyptus_barrel", RAINBOW_EUCALYPTUS_BARREL, true);
+        VariantBarrelBlock REDWOOD_BARREL = new VariantBarrelBlock(); registerBarrelBlock("redwood_barrel", REDWOOD_BARREL, true);
+        VariantBarrelBlock RUBBER_BARREL2 = new VariantBarrelBlock(); registerBarrelBlock("rubber_barrel2", RUBBER_BARREL2, true);
+        VariantBarrelBlock SAKURA_BARREL = new VariantBarrelBlock(); registerBarrelBlock("sakura_barrel", SAKURA_BARREL, true);
+        VariantBarrelBlock WILLOW_BARREL = new VariantBarrelBlock(); registerBarrelBlock("willow_barrel", WILLOW_BARREL, true);
+        VariantBarrelBlock YUCCA_PALM_BARREL = new VariantBarrelBlock(); registerBarrelBlock("yucca_palm_barrel", YUCCA_PALM_BARREL, true);
+
+    }
 
     // To-do : Updated Biome Makeover, Ecologics, Enriched
     // Not yet updated : Paradise Lost

@@ -45,6 +45,15 @@
     {"id":"variantbarrels:moon_barrel", "required": false},
     {"id":"variantbarrels:shadow_barrel", "required": false},
     {"id":"variantbarrels:mango_barrel", "required": false},
-    {"id":"variantbarrels:fir_barrel", "required": false}
+    {"id":"variantbarrels:fir_barrel", "required": false},
+    {"id":"variantbarrels:cypress_barrel", "required": false},
+    {"id":"variantbarrels:hemlock_barrel", "required": false},
+    {"id":"variantbarrels:japanese_maple_barrel", "required": false},
+    {"id":"variantbarrels:rainbow_eucalyptus_barrel", "required": false},
+    {"id":"variantbarrels:redwood_barrel", "required": false},
+    {"id":"variantbarrels:rubber_barrel", "required": false},
+    {"id":"variantbarrels:sakura_barrel", "required": false},
+    {"id":"variantbarrels:willow_barrel", "required": false},
+    {"id":"variantbarrels:yucca_palm_barrel", "required": false}
   ]
 }
