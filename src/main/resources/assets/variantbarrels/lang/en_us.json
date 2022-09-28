@@ -85,5 +85,9 @@
   "block.variantbarrels.rubber_barrel2": "Rubber Barrel",
   "block.variantbarrels.sakura_barrel": "Sakura Barrel",
   "block.variantbarrels.willow_barrel": "Willow Barrel",
-  "block.variantbarrels.yucca_palm_barrel": "Yucca Palm Barrel"
+  "block.variantbarrels.yucca_palm_barrel": "Yucca Palm Barrel",
+
+  "_comment15": "Cinderscapes",
+  "block.variantbarrels.scorched_barrel": "Scorched Barrel",
+  "block.variantbarrels.umbral_barrel": "Umbral Barrel"
 }

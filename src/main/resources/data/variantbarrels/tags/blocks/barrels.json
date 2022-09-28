@@ -54,6 +54,8 @@
     {"id":"variantbarrels:rubber_barrel", "required": false},
     {"id":"variantbarrels:sakura_barrel", "required": false},
     {"id":"variantbarrels:willow_barrel", "required": false},
-    {"id":"variantbarrels:yucca_palm_barrel", "required": false}
+    {"id":"variantbarrels:yucca_palm_barrel", "required": false},
+    {"id":"variantbarrels:scorched_barrel", "required": false},
+    {"id":"variantbarrels:umbral_barrel", "required": false}
   ]
 }

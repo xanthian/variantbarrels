@@ -12,12 +12,20 @@ public class Barrels {
 
     // Vanilla
     public static void addVanillaBarrels() {
-        VariantBarrelBlock ACACIA_BARREL = new VariantBarrelBlock(); registerBarrelBlock("acacia_barrel", ACACIA_BARREL,true);
-        VariantBarrelBlock BIRCH_BARREL = new VariantBarrelBlock(); registerBarrelBlock("birch_barrel", BIRCH_BARREL,true);
-        VariantBarrelBlock DARK_OAK_BARREL = new VariantBarrelBlock(); registerBarrelBlock("dark_oak_barrel", DARK_OAK_BARREL,true);
-        VariantBarrelBlock JUNGLE_BARREL = new VariantBarrelBlock(); registerBarrelBlock("jungle_barrel", JUNGLE_BARREL,true);
-        VariantBarrelBlock OAK_BARREL = new VariantBarrelBlock(); registerBarrelBlock("oak_barrel", OAK_BARREL,true);
-        VariantBarrelBlock MANGROVE_BARREL = new VariantBarrelBlock(); registerBarrelBlock("mangrove_barrel", MANGROVE_BARREL,true);
+        VariantBarrelBlock ACACIA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("acacia_barrel", ACACIA_BARREL, true);
+        VariantBarrelBlock BIRCH_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("birch_barrel", BIRCH_BARREL, true);
+        VariantBarrelBlock DARK_OAK_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("dark_oak_barrel", DARK_OAK_BARREL, true);
+        VariantBarrelBlock JUNGLE_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("jungle_barrel", JUNGLE_BARREL, true);
+        VariantBarrelBlock OAK_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("oak_barrel", OAK_BARREL, true);
+    }
+    public static void addVanilla119Barrels() {
+        VariantBarrelBlock MANGROVE_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("mangrove_barrel", MANGROVE_BARREL, true);
     }
     public static void addNetherBarrels() {
         VariantBarrelBlock CRIMSON_BARREL = new VariantBarrelBlock(); registerBarrelBlock("crimson_barrel", CRIMSON_BARREL,false);
@@ -92,7 +100,10 @@ public class Barrels {
         VariantBarrelBlock SAKURA_BARREL = new VariantBarrelBlock(); registerBarrelBlock("sakura_barrel", SAKURA_BARREL, true);
         VariantBarrelBlock WILLOW_BARREL = new VariantBarrelBlock(); registerBarrelBlock("willow_barrel", WILLOW_BARREL, true);
         VariantBarrelBlock YUCCA_PALM_BARREL = new VariantBarrelBlock(); registerBarrelBlock("yucca_palm_barrel", YUCCA_PALM_BARREL, true);
-
+    }
+    public static void addCinderscapeBarrels() {
+        VariantBarrelBlock SCORCHED_BARREL = new VariantBarrelBlock(); registerBarrelBlock("scorched_barrel", SCORCHED_BARREL, true);
+        VariantBarrelBlock UMBRAL_BARREL = new VariantBarrelBlock(); registerBarrelBlock("umbral_barrel", UMBRAL_BARREL, true);
     }
 
     // To-do : Updated Biome Makeover, Ecologics, Enriched
