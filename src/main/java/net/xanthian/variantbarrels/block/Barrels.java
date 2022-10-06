@@ -1,5 +1,6 @@
 package net.xanthian.variantbarrels.block;
 
+import com.google.common.collect.Maps;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
@@ -8,7 +9,11 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.variantbarrels.Initialise;
 
+import java.util.Map;
+
 public class Barrels {
+
+    public static Map<Identifier, Block> MOD_BARRELS = Maps.newHashMap();
 
     // Vanilla
     public static void addVanillaBarrels() {
@@ -114,5 +119,6 @@ public class Barrels {
         Registry.register(Registry.BLOCK, identifier, block);
         Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VARIANTBARRELS)));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
+        MOD_BARRELS.put(identifier, block);
         }
     }

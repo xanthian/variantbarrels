@@ -13,6 +13,7 @@ import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantbarrels.block.Barrels;
 
+import net.xanthian.variantbarrels.util.ModPOITypes;
 import org.apache.commons.lang3.tuple.Pair;
 
 import org.slf4j.Logger;
@@ -29,9 +30,9 @@ public class Initialise implements ModInitializer {
     public static final ItemGroup VARIANTBARRELS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variantbarrels"),
             () -> new ItemStack(Items.BARREL));
 
-
     @Override
     public void onInitialize() {
+
         // Disable Vanilla barrels if Blockus is installed
         if (!FabricLoader.getInstance().isModLoaded("blockus")) {
             Barrels.addVanillaBarrels();
@@ -159,5 +160,6 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("umbral", new String[]{"cinderscapes"}));
             Barrels.addCinderscapeBarrels();
         }
+        ModPOITypes.init();
     }
 }

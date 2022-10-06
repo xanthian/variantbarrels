@@ -14,6 +14,7 @@ import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
 
+import net.xanthian.variantbarrels.block.Barrels;
 import net.xanthian.variantbarrels.mixin.PointOfInterestTypesAccessor;
 
 public class ModPOITypes {
@@ -29,7 +30,7 @@ public class ModPOITypes {
         // NOTE: PointOfInterestType.blockStates is accessible by access widener
         List<BlockState> fishermanBlockStates = new ArrayList<BlockState>(fishermanPoiType.blockStates);
 
-        for (Block block : ModBlocks.REINFORCED_BARREL_MAP.values()) {
+        for (Block block : Barrels.MOD_BARRELS.values()) {
             ImmutableList<BlockState> blockStates = block.getStateManager().getStates();
 
             for (BlockState blockState : blockStates) {

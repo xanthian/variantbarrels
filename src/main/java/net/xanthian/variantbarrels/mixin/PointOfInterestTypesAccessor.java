@@ -9,6 +9,10 @@ import net.minecraft.world.poi.PointOfInterestTypes;
 
 import java.util.Map;
 
+/**
+ * @author Aton-kish
+ **/
+
 @Mixin(PointOfInterestTypes.class)
 public interface PointOfInterestTypesAccessor {
     @Accessor("POI_STATES_TO_TYPE")
