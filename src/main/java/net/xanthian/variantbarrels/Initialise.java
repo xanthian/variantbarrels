@@ -29,6 +29,7 @@ public class Initialise implements ModInitializer {
     public static final ItemGroup VARIANTBARRELS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variantbarrels"),
             () -> new ItemStack(Items.BARREL));
 
+
     @Override
     public void onInitialize() {
         // Disable Vanilla barrels if Blockus is installed
