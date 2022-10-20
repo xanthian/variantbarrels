@@ -1,6 +1,6 @@
 # Variant Barrels
-<a href="http:/www.curseforge.com/minecraft/mc-mods/variant-barrels-fabric"><img src="http://cf.way2muchnoise.eu/full_variant-barrels-fabric_downloads.svg">
- <img src="http://cf.way2muchnoise.eu/versions/variant-barrels-fabric.svg"></a>
+<a href="http:/www.curseforge.com/minecraft/mc-mods/variant-barrels-fabric"><img src="http://cf.way2muchnoise.eu/full_576766_downloads.svg">
+ <img src="http://cf.way2muchnoise.eu/versions/576766.svg"></a>
  </p>
 
 ## Barrels for all wood types
