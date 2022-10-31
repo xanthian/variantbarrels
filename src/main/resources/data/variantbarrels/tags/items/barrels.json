@@ -56,6 +56,13 @@
     {"id":"variantbarrels:willow_barrel", "required": false},
     {"id":"variantbarrels:yucca_palm_barrel", "required": false},
     {"id":"variantbarrels:scorched_barrel", "required": false},
-    {"id":"variantbarrels:umbral_barrel", "required": false}
+    {"id":"variantbarrels:umbral_barrel", "required": false},
+    {"id":"variantbarrels:azule_azalea_barrel", "required": false},
+    {"id":"variantbarrels:bright_azalea_barrel", "required": false},
+    {"id":"variantbarrels:fiss_azalea_barrel", "required": false},
+    {"id":"variantbarrels:roze_azalea_barrel", "required": false},
+    {"id":"variantbarrels:tecal_azalea_barrel", "required": false},
+    {"id":"variantbarrels:titanium_azalea_barrel", "required": false},
+    {"id":"variantbarrels:walnut_azalea_barrel", "required": false}
   ]
 }

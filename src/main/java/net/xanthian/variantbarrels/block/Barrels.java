@@ -110,6 +110,22 @@ public class Barrels {
         VariantBarrelBlock SCORCHED_BARREL = new VariantBarrelBlock(); registerBarrelBlock("scorched_barrel", SCORCHED_BARREL, true);
         VariantBarrelBlock UMBRAL_BARREL = new VariantBarrelBlock(); registerBarrelBlock("umbral_barrel", UMBRAL_BARREL, true);
     }
+    public static void addColorfulAzaleasBarrels() {
+        VariantBarrelBlock AZULE_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("azule_azalea_barrel", AZULE_AZALEA_BARREL, true);
+        VariantBarrelBlock BRIGHT_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("bright_azalea_barrel", BRIGHT_AZALEA_BARREL, true);
+        VariantBarrelBlock FISS_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("fiss_azalea_barrel", FISS_AZALEA_BARREL, true);
+        VariantBarrelBlock ROZE_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("roze_azalea_barrel", ROZE_AZALEA_BARREL, true);
+        VariantBarrelBlock TECAL_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("tecal_azalea_barrel", TECAL_AZALEA_BARREL, true);
+        VariantBarrelBlock TITANIUM_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("titanium_azalea_barrel", TITANIUM_AZALEA_BARREL, true);
+        VariantBarrelBlock WALNUT_AZALEA_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("walnut_azalea_barrel", WALNUT_AZALEA_BARREL, true);
+    }
 
     // To-do : Updated Biome Makeover, Ecologics, Enriched
     // Not yet updated : Paradise Lost

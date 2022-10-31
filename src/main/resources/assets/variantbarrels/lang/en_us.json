@@ -1,9 +1,6 @@
 {
-
-  "_comment0": "Creative Tab",
   "itemGroup.variantbarrels.variantbarrels": "Variant Barrels",
 
-  "_comment1": "Vanilla",
   "block.variantbarrels.acacia_barrel": "Acacia Barrel",
   "block.variantbarrels.birch_barrel": "Birch Barrel",
   "block.variantbarrels.dark_oak_barrel": "Dark Oak Barrel",
@@ -14,21 +11,14 @@
   "block.variantbarrels.crimson_barrel": "Crimson Barrel",
   "block.variantbarrels.warped_barrel": "Warped Barrel",
 
-  "_comment2": "Tech Reborn",
   "block.variantbarrels.rubber_barrel": "Rubber Barrel",
 
-  "_comment3": "",
-
-
-  "_comment4": "Wilder World",
   "block.variantbarrels.wisteria_barrel": "Wisteria Barrel",
 
-  "_comment5": "Promenade",
   "block.variantbarrels.cherry_oak_barrel": "Cherry Oak Barrel",
   "block.variantbarrels.dark_amaranth_barrel": "Dark Amaranth Barrel",
   "block.variantbarrels.palm_barrel": "Palm Barrel",
-  
-  "_comment6": "Spectrum",
+
   "block.variantbarrels.black_barrel": "Black Barrel",
   "block.variantbarrels.blue_barrel": "Blue Barrel",
   "block.variantbarrels.brown_barrel": "Brown Barrel",
@@ -46,37 +36,29 @@
   "block.variantbarrels.white_barrel": "White Barrel",
   "block.variantbarrels.yellow_barrel": "Yellow Barrel",
 
-  "_comment7": "Bewitchment",
   "block.variantbarrels.cypress_barrel": "Cypress Barrel",
   "block.variantbarrels.elder_barrel": "Elder Barrel",
   "block.variantbarrels.dragons_blood_barrel": "Dragons Blood Barrel",
   "block.variantbarrels.juniper_barrel": "Juniper Barrel",
 
-  "_comment8": "Twigs",
   "block.variantbarrels.stripped_bamboo_barrel": "Stripped Bamboo Barrel",
 
-  "_comment9": "Botania",
   "block.variantbarrels.dreamwood_barrel": "Dreamwood Barrel",
   "block.variantbarrels.livingwood_barrel": "Livingwood Barrel",
   "block.variantbarrels.mossy_dreamwood_barrel": "Mossy Dreamwood Barrel",
   "block.variantbarrels.mossy_livingwood_barrel": "Mossy Livingwood Barrel",
   "block.variantbarrels.shimmerwood_barrel": "Shimmerwood Barrel",
 
-  "_comment10": "Croptopia",
   "block.variantbarrels.cinnamon_barrel": "Cinnamon Barrel",
 
-  "_comment11": "Epic Paladins",
   "block.variantbarrels.jade_barrel": "Jade Birch Barrel",
   "block.variantbarrels.moon_barrel": "Moon Barrel",
   "block.variantbarrels.shadow_barrel": "Shadow Barrel",
 
-  "_comment12": "Simple Mango",
   "block.variantbarrels.mango_barrel": "Mango Barrel",
 
-  "_comment13": "Traverse",
   "block.variantbarrels.fir_barrel": "Fir Barrel",
 
-  "_comment14": "Terrestria",
   "block.variantbarrels.cypress_barrel2": "Cypress Barrel",
   "block.variantbarrels.hemlock_barrel": "Hemlock Barrel",
   "block.variantbarrels.japanese_maple_barrel": "Japanese Maple Barrel",
@@ -87,7 +69,14 @@
   "block.variantbarrels.willow_barrel": "Willow Barrel",
   "block.variantbarrels.yucca_palm_barrel": "Yucca Palm Barrel",
 
-  "_comment15": "Cinderscapes",
   "block.variantbarrels.scorched_barrel": "Scorched Barrel",
-  "block.variantbarrels.umbral_barrel": "Umbral Barrel"
+  "block.variantbarrels.umbral_barrel": "Umbral Barrel",
+
+  "block.variantbarrels.azule_azalea_barrel": "Azule Azalea Barrel",
+  "block.variantbarrels.bright_azalea_barrel": "Bright Azalea Barrel",
+  "block.variantbarrels.fiss_azalea_barrel": "Fiss Azalea Barrel",
+  "block.variantbarrels.roze_azalea_barrel": "Roze Azalea Barrel",
+  "block.variantbarrels.tecal_azalea_barrel": "Tecal Azalea Barrel",
+  "block.variantbarrels.titanium_azalea_barrel": "Titanium Azalea Barrel",
+  "block.variantbarrels.walnut_azalea_barrel": "Walnut Azalea Barrel"
 }
