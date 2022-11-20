@@ -6,7 +6,6 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
-import net.minecraft.SharedConstants;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -16,15 +15,11 @@ import net.xanthian.variantbarrels.block.Barrels;
 import net.xanthian.variantbarrels.util.ModPOITypes;
 import org.apache.commons.lang3.tuple.Pair;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantbarrels";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
     public static List<Pair<String, String[]>> plankwoodTypes = Lists.newArrayList();
     public static final ItemGroup VARIANTBARRELS = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "variantbarrels"),
@@ -33,32 +28,19 @@ public class Initialise implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        // Disable Vanilla barrels if Blockus is installed
-        if (!FabricLoader.getInstance().isModLoaded("blockus")) {
-            Barrels.addVanillaBarrels();
-            woodTypes.add(Pair.of("acacia", new String[0]));
-            woodTypes.add(Pair.of("birch", new String[0]));
-            woodTypes.add(Pair.of("dark_oak", new String[0]));
-            woodTypes.add(Pair.of("jungle", new String[0]));
-            woodTypes.add(Pair.of("oak", new String[0]));
-            if (SharedConstants.getGameVersion().getName().startsWith("1.19")) {
-                woodTypes.add(Pair.of("mangrove", new String[0]));
-                Barrels.addVanilla119Barrels();
-            }
-        }
-        if (FabricLoader.getInstance().isModLoaded("blockus")) {
-            LOGGER.info("Blockus detected, removing Barrels from Variant Barrels");
-        }
+        Barrels.addVanillaBarrels();
+        woodTypes.add(Pair.of("acacia", new String[0]));
+        woodTypes.add(Pair.of("birch", new String[0]));
+        woodTypes.add(Pair.of("dark_oak", new String[0]));
+        woodTypes.add(Pair.of("jungle", new String[0]));
+        woodTypes.add(Pair.of("oak", new String[0]));
+        woodTypes.add(Pair.of("mangrove", new String[0]));
+        Barrels.addVanilla119Barrels();
 
-        // Disable Nether barrels if Better Nether is installed
-        if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            Barrels.addNetherBarrels();
-            woodTypes.add(Pair.of("crimson", new String[0]));
-            woodTypes.add(Pair.of("warped", new String[0]));
-        }
-        if (FabricLoader.getInstance().isModLoaded("betternether")) {
-            LOGGER.info("Better Nether detected, removing Barrels from Variant Barrels");
-        }
+        woodTypes.add(Pair.of("crimson", new String[0]));
+        woodTypes.add(Pair.of("warped", new String[0]));
+        Barrels.addNetherBarrels();
+
         // Tech Reborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             Barrels.addTechRebornBarrels();
