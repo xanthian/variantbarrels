@@ -126,8 +126,14 @@ public class Barrels {
         VariantBarrelBlock WALNUT_AZALEA_BARREL = new VariantBarrelBlock();
         registerBarrelBlock("walnut_azalea_barrel", WALNUT_AZALEA_BARREL, true);
     }
+    public static void addWilderWildsBarrels() {
+        VariantBarrelBlock BAOBAB_BARREL = new VariantBarrelBlock();
+        registerBarrelBlock("baobab_barrel", BAOBAB_BARREL, true);
+        VariantBarrelBlock CYPRESS_BARREL3 = new VariantBarrelBlock();
+        registerBarrelBlock("cypress_barrel3", CYPRESS_BARREL3, true);
+    }
 
-    // To-do : Updated Biome Makeover, Ecologics, Enriched
+        // To-do : Updated Biome Makeover, Ecologics, Enriched
     // Not yet updated : Paradise Lost
 
     private static void registerBarrelBlock(String Id, Block block, boolean canBurn) {

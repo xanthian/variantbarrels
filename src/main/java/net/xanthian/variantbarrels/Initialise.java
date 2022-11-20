@@ -171,6 +171,12 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("walnut_azalea", new String[]{"colorful-azaleas"}));
             Barrels.addColorfulAzaleasBarrels();
         }
+        // Wilder Wild
+        if(FabricLoader.getInstance().isModLoaded("wilderwild")) {
+            woodTypes.add(Pair.of("baobab", new String[]{"wilderwild"}));
+            //woodTypes.add(Pair.of("cypress", new String[]{"wilderwild"}));
+            Barrels.addWilderWildsBarrels();
+        }
         ModPOITypes.init();
     }
 }

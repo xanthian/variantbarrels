@@ -63,6 +63,8 @@
     {"id":"variantbarrels:roze_azalea_barrel", "required": false},
     {"id":"variantbarrels:tecal_azalea_barrel", "required": false},
     {"id":"variantbarrels:titanium_azalea_barrel", "required": false},
-    {"id":"variantbarrels:walnut_azalea_barrel", "required": false}
+    {"id":"variantbarrels:walnut_azalea_barrel", "required": false},
+    {"id":"variantbarrels:baobab_barrel", "required": false},
+    {"id":"variantbarrels:cypress_barrel3", "required": false}
   ]
 }
