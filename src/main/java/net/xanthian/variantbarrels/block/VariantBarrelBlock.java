@@ -16,6 +16,7 @@ public class VariantBarrelBlock extends BarrelBlock {
     public static final TagKey<Block> WOODEN_BARRELS = TagKey.of(Registry.BLOCK_KEY, new Identifier("c", "wooden_barrels"));
     public static final TagKey<Item> BARREL_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("c", "barrel"));
     public static final TagKey<Item> WOODEN_BARRELS_ITEM = TagKey.of(Registry.ITEM_KEY, new Identifier("c", "wooden_barrels"));
+
     public VariantBarrelBlock() {
         super(FabricBlockSettings.copy(Blocks.BARREL));
 
