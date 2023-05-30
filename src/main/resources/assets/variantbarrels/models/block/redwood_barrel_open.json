@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "variantbarrels:block/redwood_barrel_top_open",
-    "bottom": "variantbarrels:block/redwood_barrel_bottom",
-    "side": "variantbarrels:block/redwood_barrel_side"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "top": "variantbarrels:block/stripped_bamboo_barrel_top",
-    "bottom": "variantbarrels:block/stripped_bamboo_barrel_bottom",
-    "side": "variantbarrels:block/stripped_bamboo_barrel_side"
-  }
-}

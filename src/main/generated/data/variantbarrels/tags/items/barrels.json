@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "variantbarrels:acacia_barrel",
+    "variantbarrels:bamboo_barrel",
+    "variantbarrels:birch_barrel",
+    "variantbarrels:cherry_barrel",
+    "variantbarrels:crimson_barrel",
+    "variantbarrels:dark_oak_barrel",
+    "variantbarrels:jungle_barrel",
+    "variantbarrels:mangrove_barrel",
+    "variantbarrels:oak_barrel",
+    "variantbarrels:warped_barrel"
+  ]
+}
