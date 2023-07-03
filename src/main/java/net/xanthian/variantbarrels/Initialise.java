@@ -25,7 +25,7 @@ public class Initialise implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        // Custom Item Group
+
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("variantbarrels.group.variantbarrels"))
                 .icon(() -> new ItemStack(Barrels.MANGROVE_BARREL))

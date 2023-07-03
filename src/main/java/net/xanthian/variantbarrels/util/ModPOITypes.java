@@ -21,26 +21,17 @@ public class ModPOITypes {
     public static void init() {
         Map<BlockState, RegistryEntry<PointOfInterestType>> poiStatesToType = PointOfInterestTypesAccessor
                 .getPointOfInterestStatesToType();
-
         RegistryEntry<PointOfInterestType> fishermanEntry = Registries.POINT_OF_INTEREST_TYPE
                 .getEntry(PointOfInterestTypes.FISHERMAN).get();
-
         PointOfInterestType fishermanPoiType = Registries.POINT_OF_INTEREST_TYPE.get(PointOfInterestTypes.FISHERMAN);
-
-        // NOTE: PointOfInterestType.blockStates is accessible by access widener
         List<BlockState> fishermanBlockStates = new ArrayList<BlockState>(fishermanPoiType.blockStates);
-
         for (Block block : Barrels.MOD_BARRELS.values()) {
             ImmutableList<BlockState> blockStates = block.getStateManager().getStates();
-
             for (BlockState blockState : blockStates) {
                 poiStatesToType.putIfAbsent(blockState, fishermanEntry);
             }
-
             fishermanBlockStates.addAll(blockStates);
         }
-
-        // NOTE: PointOfInterestType.blockStates is mutable by access widener
         fishermanPoiType.blockStates = ImmutableSet.copyOf(fishermanBlockStates);
     }
 }

@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_bamboo_planks": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
@@ -13,7 +13,13 @@
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_bamboo_slab": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "variantbarrels:bamboo_barrel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_slab": {
       "conditions": {
         "items": [
           {
@@ -24,24 +30,18 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "minecraft:bamboo_barrel"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_bamboo_planks",
-      "has_bamboo_slab",
+      "has_planks",
+      "has_wood_slab",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:bamboo_barrel"
+      "variantbarrels:bamboo_barrel"
     ]
   },
   "sends_telemetry_event": false
