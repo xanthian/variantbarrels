@@ -1,0 +1,56 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "snifferplus"
+      ]
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "snifferplus:stone_pine_planks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "variantbarrels:sp_stone_pine_barrel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wood_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "snifferplus:stone_pine_slab"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_planks",
+      "has_wood_slab",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "variantbarrels:sp_stone_pine_barrel"
+    ]
+  },
+  "sends_telemetry_event": false
+}

@@ -14,7 +14,7 @@ import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.world.poi.PointOfInterestType;
 import net.minecraft.world.poi.PointOfInterestTypes;
 
-import net.xanthian.variantbarrels.block.Barrels;
+import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.mixin.PointOfInterestTypesAccessor;
 
 public class ModPOITypes {
@@ -25,7 +25,7 @@ public class ModPOITypes {
                 .getEntry(PointOfInterestTypes.FISHERMAN).get();
         PointOfInterestType fishermanPoiType = Registries.POINT_OF_INTEREST_TYPE.get(PointOfInterestTypes.FISHERMAN);
         List<BlockState> fishermanBlockStates = new ArrayList<BlockState>(fishermanPoiType.blockStates);
-        for (Block block : Barrels.MOD_BARRELS.values()) {
+        for (Block block : Vanilla.MOD_BARRELS.values()) {
             ImmutableList<BlockState> blockStates = block.getStateManager().getStates();
             for (BlockState blockState : blockStates) {
                 poiStatesToType.putIfAbsent(blockState, fishermanEntry);

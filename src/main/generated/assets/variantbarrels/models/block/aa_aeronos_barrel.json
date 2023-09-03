@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "variantbarrels:block/aa_aeronos_barrel_bottom",
+    "side": "variantbarrels:block/aa_aeronos_barrel_side",
+    "top": "variantbarrels:block/aa_aeronos_barrel_top"
+  }
+}
