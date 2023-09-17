@@ -58,11 +58,11 @@ public class Initialise implements ModInitializer {
         ModPOITypes.init();
 
         // Datagen Block - disable for client run
-        SnifferPlus.registerBarrels();
-        RegionsUnexplored.register04Barrels();
-        NaturesSpirit.registerBarrels();
-        DeeperAndDarker.registerBarrels();
-        AdAstra.registerBarrels();
+        //SnifferPlus.registerBarrels();
+        //RegionsUnexplored.register04Barrels();
+        //NaturesSpirit.registerBarrels();
+        //DeeperAndDarker.registerBarrels();
+        //AdAstra.registerBarrels();
     }
 
 
