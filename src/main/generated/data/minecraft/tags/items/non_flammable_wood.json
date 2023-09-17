@@ -2,6 +2,26 @@
   "replace": false,
   "values": [
     "variantbarrels:crimson_barrel",
-    "variantbarrels:warped_barrel"
+    "variantbarrels:warped_barrel",
+    {
+      "id": "variantbarrels:prom_dark_amaranth_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_brimwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cobalt_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_dead_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_yellow_bioshroom_barrel",
+      "required": false
+    }
   ]
 }

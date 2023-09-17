@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "variantbarrels:block/ns_sugi_barrel_bottom",
+    "side": "variantbarrels:block/ns_sugi_barrel_side",
+    "top": "variantbarrels:block/ns_sugi_barrel_top"
+  }
+}

@@ -40,7 +40,6 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .add(Vanilla.OAK_BARREL.asItem())
                     .add(Vanilla.WARPED_BARREL.asItem())
 
-
                     .addOptional(new Identifier("variantbarrels:aa_aeronos_barrel"))
                     .addOptional(new Identifier("variantbarrels:aa_glacian_barrel"))
                     .addOptional(new Identifier("variantbarrels:aa_stropar_barrel"))
@@ -55,6 +54,19 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .addOptional(new Identifier("variantbarrels:bw_juniper_barrel"))
 
                     .addOptional(new Identifier("variantbarrels:dad_echo_barrel"))
+
+                    .addOptional(new Identifier("variantbarrels:mc_putrid_barrel"))
+
+                    .addOptional(new Identifier("variantbarrels:ns_aspen_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_cypress_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_fir_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_joshua_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_maple_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_olive_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_redwood_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_sugi_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_willow_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ns_wisteria_barrel"))
 
                     .addOptional(new Identifier("variantbarrels:prom_dark_amaranth_barrel"))
                     .addOptional(new Identifier("variantbarrels:prom_maple_barrel"))
@@ -93,6 +105,12 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .addOptional(new Identifier("variantbarrels:ru_white_painted_barrel"))
                     .addOptional(new Identifier("variantbarrels:ru_willow_barrel"))
                     .addOptional(new Identifier("variantbarrels:ru_yellow_painted_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_brimwood_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_cobalt_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_kapok_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_magnolia_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_socotra_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_yellow_bioshroom_barrel"))
 
                     .addOptional(new Identifier("variantbarrels:sp_stone_pine_barrel"))
 
@@ -103,7 +121,12 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
             getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                     .add(Vanilla.CRIMSON_BARREL.asItem())
-                    .add(Vanilla.WARPED_BARREL.asItem());
+                    .add(Vanilla.WARPED_BARREL.asItem())
+                    .addOptional(new Identifier("variantbarrels:prom_dark_amaranth_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_brimwood_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_cobalt_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_dead_barrel"))
+                    .addOptional(new Identifier("variantbarrels:ru_yellow_bioshroom_barrel"));
 
             getOrCreateTagBuilder(C_JOB_SITE)
                     .addTag(BARRELS);

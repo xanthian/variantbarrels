@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "variantbarrels:block/mc_putrid_barrel_bottom",
+    "side": "variantbarrels:block/mc_putrid_barrel_side",
+    "top": "variantbarrels:block/mc_putrid_barrel_top"
+  }
+}

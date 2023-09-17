@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.fabricmc.fabric.impl.datagen.FabricDataGenHelper;
 
+import net.minecraft.block.Block;
 import net.minecraft.loot.LootTable;
 
 import net.xanthian.variantbarrels.block.Vanilla;
@@ -20,37 +21,43 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
-        addDrop(Vanilla.ACACIA_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.BAMBOO_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.BIRCH_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.CHERRY_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.CRIMSON_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.DARK_OAK_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.JUNGLE_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.MANGROVE_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.OAK_BARREL, this::nameableContainerDrops);
-        addDrop(Vanilla.WARPED_BARREL, this::nameableContainerDrops);
+
+        for (Block block : Vanilla.MOD_BARRELS.values()){
+            addDrop(block, this::nameableContainerDrops);
+        }
 
         // Ad Astra
-        addDrop(AdAstra.AA_AERONOS_BARREL,addConditions(nameableContainerDrops(AdAstra.AA_AERONOS_BARREL), List.of(DefaultResourceConditions.allModsLoaded("ad_astra"))));
-        addDrop(AdAstra.AA_GLACIAN_BARREL, addConditions(nameableContainerDrops(AdAstra.AA_GLACIAN_BARREL), List.of(DefaultResourceConditions.allModsLoaded("ad_astra"))));
-        addDrop(AdAstra.AA_STROPHAR_BARREL, addConditions(nameableContainerDrops(AdAstra.AA_STROPHAR_BARREL), List.of(DefaultResourceConditions.allModsLoaded("ad_astra"))));
+        for (Block block : AdAstra.AA_BARRELS.values()){
+            addDrop(block, addConditions(nameableContainerDrops(block),List.of(DefaultResourceConditions.allModsLoaded("ad_astra"))));
+        }
+
         // Beach Party (Lets Do)
         addDrop(BeachParty.LDBP_PALM_BARREL, addConditions(nameableContainerDrops(BeachParty.LDBP_PALM_BARREL), List.of(DefaultResourceConditions.allModsLoaded("beachparty"))));
+        
         // Better Archeology
         addDrop(BetterArcheology.BA_ROTTEN_BARREL, addConditions(nameableContainerDrops(BetterArcheology.BA_ROTTEN_BARREL), List.of(DefaultResourceConditions.allModsLoaded("betterarcheology"))));
+        
         // Bewitchment
-        addDrop(Bewitchment.BW_CYPRESS_BARREL, addConditions(nameableContainerDrops(Bewitchment.BW_CYPRESS_BARREL), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
-        addDrop(Bewitchment.BW_DRAGONS_BLOOD_BARREL, addConditions(nameableContainerDrops(Bewitchment.BW_DRAGONS_BLOOD_BARREL), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
-        addDrop(Bewitchment.BW_ELDER_BARREL, addConditions(nameableContainerDrops(Bewitchment.BW_ELDER_BARREL), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
-        addDrop(Bewitchment.BW_JUNIPER_BARREL, addConditions(nameableContainerDrops(Bewitchment.BW_JUNIPER_BARREL), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
+        for (Block block : Bewitchment.BW_BARRELS.values()){
+            addDrop(block, addConditions(nameableContainerDrops(block),List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
+        }
+
         // Deeper & Darker
         addDrop(DeeperAndDarker.DAD_ECHO_BARREL, addConditions(nameableContainerDrops(DeeperAndDarker.DAD_ECHO_BARREL), List.of(DefaultResourceConditions.allModsLoaded("deeperdarker"))));
+        
+        // MineCells
+        addDrop(MineCells.MC_PUTRID_BARREL, addConditions(nameableContainerDrops(MineCells.MC_PUTRID_BARREL), List.of(DefaultResourceConditions.allModsLoaded("minecells"))));
+        
+        // Natures Spirit
+        for (Block block : NaturesSpirit.NS_BARRELS.values()){
+            addDrop(block, addConditions(nameableContainerDrops(block),List.of(DefaultResourceConditions.allModsLoaded("natures_spirit"))));
+        }
+
         // Promenade
-        addDrop(Promenade.PROM_DARK_AMARANTH_BARREL, addConditions(nameableContainerDrops(Promenade.PROM_DARK_AMARANTH_BARREL), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
-        addDrop(Promenade.PROM_MAPLE_BARREL, addConditions(nameableContainerDrops(Promenade.PROM_MAPLE_BARREL), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
-        addDrop(Promenade.PROM_PALM_BARREL, addConditions(nameableContainerDrops(Promenade.PROM_PALM_BARREL), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
-        addDrop(Promenade.PROM_SAKURA_BARREL, addConditions(nameableContainerDrops(Promenade.PROM_SAKURA_BARREL), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
+        for (Block block : Promenade.PROM_BARRELS.values()){
+            addDrop(block, addConditions(nameableContainerDrops(block),List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
+        }
+
         // Regions Unexplored
         addDrop(RegionsUnexplored.RU_ALPHA_OAK_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_ALPHA_OAK_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_BAOBAB_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_BAOBAB_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
@@ -58,7 +65,6 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(RegionsUnexplored.RU_BLACKWOOD_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_BLACKWOOD_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_BLUE_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_BLUE_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_BROWN_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_BROWN_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
-        addDrop(RegionsUnexplored.RU_CHERRY_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_CHERRY_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_CYAN_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_CYAN_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_CYPRESS_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_CYPRESS_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_DEAD_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_DEAD_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
@@ -80,14 +86,26 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(RegionsUnexplored.RU_PURPLE_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_PURPLE_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_RED_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_RED_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_REDWOOD_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_REDWOOD_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
-        addDrop(RegionsUnexplored.RU_SCULKWOOD_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_SCULKWOOD_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
+
         addDrop(RegionsUnexplored.RU_WHITE_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_WHITE_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_WILLOW_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_WILLOW_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_YELLOW_PAINTED_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_YELLOW_PAINTED_BARREL), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
+        //addDrop(RegionsUnexplored.RU_CHERRY_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_CHERRY_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:cherry_planks")))))));
+        //addDrop(RegionsUnexplored.RU_SCULKWOOD_BARREL, addConditions(nameableContainerDrops(RegionsUnexplored.RU_SCULKWOOD_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:sculkwood_planks")))))));
+        addDrop(RegionsUnexplored.RU_BRIMWOOD_BARREL, addConditions(drops(RegionsUnexplored.RU_BRIMWOOD_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+        addDrop(RegionsUnexplored.RU_COBALT_BARREL, addConditions(drops(RegionsUnexplored.RU_COBALT_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+        addDrop(RegionsUnexplored.RU_KAPOK_BARREL, addConditions(drops(RegionsUnexplored.RU_KAPOK_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+        addDrop(RegionsUnexplored.RU_MAGNOLIA_BARREL, addConditions(drops(RegionsUnexplored.RU_MAGNOLIA_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+        addDrop(RegionsUnexplored.RU_SOCOTRA_BARREL, addConditions(drops(RegionsUnexplored.RU_SOCOTRA_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+        addDrop(RegionsUnexplored.RU_YELLOW_BIOSHROOM_BARREL, addConditions(drops(RegionsUnexplored.RU_YELLOW_BIOSHROOM_BARREL), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+
+
         // SnifferPlus
         addDrop(SnifferPlus.SP_STONE_PINE_BARREL, addConditions(nameableContainerDrops(SnifferPlus.SP_STONE_PINE_BARREL), List.of(DefaultResourceConditions.allModsLoaded("snifferplus"))));
+
         // Tech reborn
         addDrop(TechReborn.TR_RUBBER_BARREL, addConditions(nameableContainerDrops(TechReborn.TR_RUBBER_BARREL), List.of(DefaultResourceConditions.allModsLoaded("techreborn"))));
+
         // Vinery (Lets Do)
         addDrop(Vinery.LDV_CHERRY_BARREL, addConditions(nameableContainerDrops(Vinery.LDV_CHERRY_BARREL), List.of(DefaultResourceConditions.allModsLoaded("vinery"))));
     }

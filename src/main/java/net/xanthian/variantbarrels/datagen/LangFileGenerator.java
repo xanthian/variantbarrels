@@ -32,22 +32,43 @@ public class LangFileGenerator  extends FabricLanguageProvider {
         translationBuilder.add(AdAstra.AA_AERONOS_BARREL, "Aeronos Barrel");
         translationBuilder.add(AdAstra.AA_GLACIAN_BARREL, "Glacian Barrel");
         translationBuilder.add(AdAstra.AA_STROPHAR_BARREL, "Strophar Barrel");
+
         // Beach Party (Lets Do)
         translationBuilder.add(BeachParty.LDBP_PALM_BARREL, "Palm Barrel");
+
         // Better Archeology
         translationBuilder.add(BetterArcheology.BA_ROTTEN_BARREL, "Rotten Barrel");
+
         // Bewitchment
         translationBuilder.add(Bewitchment.BW_CYPRESS_BARREL, "Cypress Barrel");
         translationBuilder.add(Bewitchment.BW_DRAGONS_BLOOD_BARREL, "Dragon's Blood Barrel");
         translationBuilder.add(Bewitchment.BW_ELDER_BARREL, "Elder Barrel");
         translationBuilder.add(Bewitchment.BW_JUNIPER_BARREL, "Juniper Barrel");
+
         // Deeper & Darker
         translationBuilder.add(DeeperAndDarker.DAD_ECHO_BARREL, "Echo Barrel");
+
+        // MineCells
+        translationBuilder.add(MineCells.MC_PUTRID_BARREL, "Putrid Barrel");
+
+        // Natures Spirit
+        translationBuilder.add(NaturesSpirit.NS_ASPEN_BARREL, "Aspen Barrel");
+        translationBuilder.add(NaturesSpirit.NS_CYPRESS_BARREL,"Cypress Barrel");
+        translationBuilder.add(NaturesSpirit.NS_FIR_BARREL,"Fir Barrel");
+        translationBuilder.add(NaturesSpirit.NS_JOSHUA_BARREL,"Joshua Barrel");
+        translationBuilder.add(NaturesSpirit.NS_MAPLE_BARREL, "Maple Barrel");
+        translationBuilder.add(NaturesSpirit.NS_OLIVE_BARREL, "Olive Barrel");
+        translationBuilder.add(NaturesSpirit.NS_REDWOOD_BARREL, "Redwood Barrel");
+        translationBuilder.add(NaturesSpirit.NS_SUGI_BARREL, "Sugi Barrel");
+        translationBuilder.add(NaturesSpirit.NS_WILLOW_BARREL, "Willow Barrel");
+        translationBuilder.add(NaturesSpirit.NS_WISTERIA_BARREL, "Wisteria Barrel");
+
         // Promenade
         translationBuilder.add(Promenade.PROM_DARK_AMARANTH_BARREL, "Dark Amaranth Barrel");
         translationBuilder.add(Promenade.PROM_MAPLE_BARREL, "Maple Barrel");
         translationBuilder.add(Promenade.PROM_PALM_BARREL, "Palm Barrel");
         translationBuilder.add(Promenade.PROM_SAKURA_BARREL, "Sakura Barrel");
+
         // Regions Unexplored
         translationBuilder.add(RegionsUnexplored.RU_ALPHA_OAK_BARREL, "Alpha Oak Barrel");
         translationBuilder.add(RegionsUnexplored.RU_BAOBAB_BARREL,"Baobab Barrel");
@@ -55,7 +76,6 @@ public class LangFileGenerator  extends FabricLanguageProvider {
         translationBuilder.add(RegionsUnexplored.RU_BLACKWOOD_BARREL,"Blackwood Barrel");
         translationBuilder.add(RegionsUnexplored.RU_BLUE_PAINTED_BARREL, "Blue Painted Barrel");
         translationBuilder.add(RegionsUnexplored.RU_BROWN_PAINTED_BARREL, "Brown Painted Barrel");
-        translationBuilder.add(RegionsUnexplored.RU_CHERRY_BARREL, "Cherry Barrel");
         translationBuilder.add(RegionsUnexplored.RU_CYAN_PAINTED_BARREL, "Cyan Painted Barrel");
         translationBuilder.add(RegionsUnexplored.RU_CYPRESS_BARREL, "Cypress Barrel");
         translationBuilder.add(RegionsUnexplored.RU_DEAD_BARREL, "Dead Barrel");
@@ -77,14 +97,24 @@ public class LangFileGenerator  extends FabricLanguageProvider {
         translationBuilder.add(RegionsUnexplored.RU_PURPLE_PAINTED_BARREL, "Purple Painted Barrel");
         translationBuilder.add(RegionsUnexplored.RU_REDWOOD_BARREL, "Redwood Barrel");
         translationBuilder.add(RegionsUnexplored.RU_RED_PAINTED_BARREL, "Red Painted Barrel");
-        translationBuilder.add(RegionsUnexplored.RU_SCULKWOOD_BARREL, "Sculkwood Barrel");
         translationBuilder.add(RegionsUnexplored.RU_WHITE_PAINTED_BARREL, "White Painted Barrel");
         translationBuilder.add(RegionsUnexplored.RU_WILLOW_BARREL, "Willow Barrel");
         translationBuilder.add(RegionsUnexplored.RU_YELLOW_PAINTED_BARREL, "Yellow Painted Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_CHERRY_BARREL, "Cherry Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_SCULKWOOD_BARREL, "Sculkwood Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_BRIMWOOD_BARREL, "Brimwood Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_COBALT_BARREL, "Cobalt Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_KAPOK_BARREL, "Kapok Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_MAGNOLIA_BARREL, "Magnolia Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_SOCOTRA_BARREL, "Socotra Barrel");
+            translationBuilder.add(RegionsUnexplored.RU_YELLOW_BIOSHROOM_BARREL, "Yellow Bioshroom Barrel");
+
         // SnifferPlus
         translationBuilder.add(SnifferPlus.SP_STONE_PINE_BARREL, "Stone Pine Barrel");
+
         // Tech Reborn
         translationBuilder.add(TechReborn.TR_RUBBER_BARREL, "Rubber Barrel");
+
         // Vinery
         translationBuilder.add(Vinery.LDV_CHERRY_BARREL,"Cherry Barrel");
     }

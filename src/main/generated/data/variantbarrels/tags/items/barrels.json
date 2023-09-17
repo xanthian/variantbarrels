@@ -52,6 +52,50 @@
       "required": false
     },
     {
+      "id": "variantbarrels:mc_putrid_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_aspen_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_cypress_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_fir_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_joshua_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_maple_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_olive_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_redwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_sugi_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_willow_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_wisteria_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:prom_dark_amaranth_barrel",
       "required": false
     },
@@ -193,6 +237,30 @@
     },
     {
       "id": "variantbarrels:ru_yellow_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_brimwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cobalt_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_kapok_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_magnolia_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_socotra_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_yellow_bioshroom_barrel",
       "required": false
     },
     {

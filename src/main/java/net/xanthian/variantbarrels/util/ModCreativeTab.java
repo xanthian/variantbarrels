@@ -3,6 +3,7 @@ package net.xanthian.variantbarrels.util;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,8 @@ import net.minecraft.util.Identifier;
 import net.xanthian.variantbarrels.Initialise;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
+
+import static net.xanthian.variantbarrels.Initialise.isModVersion;
 
 public class ModCreativeTab {
 
@@ -38,9 +41,9 @@ public class ModCreativeTab {
                         entries.add(Vanilla.WARPED_BARREL);
 
                         if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
-                            entries.add(AdAstra.AA_AERONOS_BARREL);
-                            entries.add(AdAstra.AA_GLACIAN_BARREL);
-                            entries.add(AdAstra.AA_STROPHAR_BARREL);
+                            for (Block block : AdAstra.AA_BARRELS.values()) {
+                                entries.add(block);
+                            }
                         }
                         if (FabricLoader.getInstance().isModLoaded("beachparty")) {
                             entries.add(BeachParty.LDBP_PALM_BARREL);
@@ -49,13 +52,20 @@ public class ModCreativeTab {
                             entries.add(BetterArcheology.BA_ROTTEN_BARREL);
                         }
                         if (FabricLoader.getInstance().isModLoaded("bewitchment")){
-                            entries.add(Bewitchment.BW_CYPRESS_BARREL);
-                            entries.add(Bewitchment.BW_DRAGONS_BLOOD_BARREL);
-                            entries.add(Bewitchment.BW_ELDER_BARREL);
-                            entries.add(Bewitchment.BW_JUNIPER_BARREL);
+                            for (Block block : Bewitchment.BW_BARRELS.values()) {
+                                entries.add(block);
+                            }
                         }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_BARREL);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("minecells")) {
+                            entries.add(MineCells.MC_PUTRID_BARREL);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("natures_spirit")) {
+                            for (Block block : NaturesSpirit.NS_BARRELS.values()) {
+                                entries.add(block);
+                            }
                         }
                         if (FabricLoader.getInstance().isModLoaded("promenade")) {
                             entries.add(Promenade.PROM_DARK_AMARANTH_BARREL);
@@ -70,7 +80,6 @@ public class ModCreativeTab {
                             entries.add(RegionsUnexplored.RU_BLACKWOOD_BARREL);
                             entries.add(RegionsUnexplored.RU_BLUE_PAINTED_BARREL);
                             entries.add(RegionsUnexplored.RU_BROWN_PAINTED_BARREL);
-                            entries.add(RegionsUnexplored.RU_CHERRY_BARREL);
                             entries.add(RegionsUnexplored.RU_CYAN_PAINTED_BARREL);
                             entries.add(RegionsUnexplored.RU_CYPRESS_BARREL);
                             entries.add(RegionsUnexplored.RU_DEAD_BARREL);
@@ -92,10 +101,21 @@ public class ModCreativeTab {
                             entries.add(RegionsUnexplored.RU_PURPLE_PAINTED_BARREL);
                             entries.add(RegionsUnexplored.RU_REDWOOD_BARREL);
                             entries.add(RegionsUnexplored.RU_RED_PAINTED_BARREL);
-                            entries.add(RegionsUnexplored.RU_SCULKWOOD_BARREL);
                             entries.add(RegionsUnexplored.RU_WHITE_PAINTED_BARREL);
                             entries.add(RegionsUnexplored.RU_WILLOW_BARREL);
                             entries.add(RegionsUnexplored.RU_YELLOW_PAINTED_BARREL);
+                            if (isModVersion("regions_unexplored", "0.4")) {
+                                entries.add(RegionsUnexplored.RU_CHERRY_BARREL);
+                                entries.add(RegionsUnexplored.RU_SCULKWOOD_BARREL);
+                            }
+                            else {
+                                entries.add(RegionsUnexplored.RU_BRIMWOOD_BARREL);
+                                entries.add(RegionsUnexplored.RU_COBALT_BARREL);
+                                entries.add(RegionsUnexplored.RU_KAPOK_BARREL);
+                                entries.add(RegionsUnexplored.RU_MAGNOLIA_BARREL);
+                                entries.add(RegionsUnexplored.RU_SOCOTRA_BARREL);
+                                entries.add(RegionsUnexplored.RU_YELLOW_BIOSHROOM_BARREL);
+                            }
                         }
                         if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
                             entries.add(SnifferPlus.SP_STONE_PINE_BARREL);
