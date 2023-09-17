@@ -68,10 +68,9 @@ public class ModCreativeTab {
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("promenade")) {
-                            entries.add(Promenade.PROM_DARK_AMARANTH_BARREL);
-                            entries.add(Promenade.PROM_MAPLE_BARREL);
-                            entries.add(Promenade.PROM_PALM_BARREL);
-                            entries.add(Promenade.PROM_SAKURA_BARREL);
+                            for (Block block : Promenade.PROM_BARRELS.values()) {
+                                entries.add(block);
+                            }
                         }
                         if (FabricLoader.getInstance().isModLoaded("regions_unexplored")){
                             entries.add(RegionsUnexplored.RU_ALPHA_OAK_BARREL);
