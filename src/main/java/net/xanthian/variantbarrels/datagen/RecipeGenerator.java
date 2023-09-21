@@ -6,7 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -21,15 +21,13 @@ import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
 import net.xanthian.variantbarrels.util.ModItemTags;
 
-import java.util.function.Consumer;
-
 public class RecipeGenerator extends FabricRecipeProvider {
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerBarrelRecipe(exporter, Vanilla.ACACIA_BARREL,Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB);
         offerBarrelRecipe(exporter, Vanilla.BAMBOO_BARREL,Blocks.BAMBOO_PLANKS, Blocks.BAMBOO_SLAB);
@@ -141,7 +139,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter,new Identifier("variantbarrels", "barrel"));
 
     }
-    public static void offerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
+    public static void offerBarrelRecipe(RecipeExporter exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, barrel, 1)
                 .input('P', plank).input('S', slab)
                 .pattern("PSP").pattern("P P").pattern("PSP")
