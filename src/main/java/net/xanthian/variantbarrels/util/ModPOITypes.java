@@ -1,43 +1,32 @@
 package net.xanthian.variantbarrels.util;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import net.minecraft.world.entity.ai.village.poi.PoiType;
+import net.minecraft.world.entity.ai.village.poi.PoiTypes;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegistryObject;
+import net.xanthian.variantbarrels.block.Vanilla;
 
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.ImmutableSet;
-
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.entry.RegistryEntry;
-import net.minecraft.world.poi.PointOfInterestType;
-import net.minecraft.world.poi.PointOfInterestTypes;
-
-import net.xanthian.variantbarrels.block.VariantBarrelBlock;
-import net.xanthian.variantbarrels.mixin.PointOfInterestTypesAccessor;
+import java.util.HashSet;
 
 public class ModPOITypes {
-    public static void init() {
 
-        Map<BlockState, RegistryEntry<PointOfInterestType>> poiStatesToType = PointOfInterestTypesAccessor
-                .getPointOfInterestStatesToType();
+    public static DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, "minecraft");
 
-        RegistryEntry<PointOfInterestType> fishermanEntry = Registries.POINT_OF_INTEREST_TYPE
-                .getEntry(PointOfInterestTypes.FISHERMAN).get();
-        PointOfInterestType fishermanPoiType = Registries.POINT_OF_INTEREST_TYPE.get(PointOfInterestTypes.FISHERMAN);
-        List<BlockState> fishermanBlockStates = new ArrayList<BlockState>(fishermanPoiType.blockStates);
+    // Credit to cech12 & BrickFurnace mod
 
-        for (Block block : Registries.BLOCK) { // Iterate through all blocks
-            if (block instanceof VariantBarrelBlock barrelBlock) { // Check if the block is an instance of VariantBarrelBlock
-                ImmutableList<BlockState> blockStates = barrelBlock.getStateManager().getStates();
-
-                for (BlockState blockState : blockStates) {
-                    poiStatesToType.putIfAbsent(blockState, fishermanEntry);
-                }
-                fishermanBlockStates.addAll(blockStates);
-            }
+    public static RegistryObject<PoiType> FISHERMAN = POI_TYPES.register("fisherman", () -> {
+        HashSet<BlockState> states = new HashSet<>(ForgeRegistries.POI_TYPES.getDelegateOrThrow(PoiTypes.FISHERMAN).get().matchingStates());
+        RegistryObject<Block>[] barrelRegistryObjects = new RegistryObject[]{
+                Vanilla.ACACIA_BARREL, Vanilla.BAMBOO_BARREL, Vanilla.CHERRY_BARREL,
+                Vanilla.CRIMSON_BARREL, Vanilla.DARK_OAK_BARREL, Vanilla.JUNGLE_BARREL,
+                Vanilla.MANGROVE_BARREL, Vanilla.OAK_BARREL, Vanilla.WARPED_BARREL
+        };
+        for (RegistryObject<Block> barrelRegistryObject : barrelRegistryObjects) {
+            states.addAll(barrelRegistryObject.get().getStateDefinition().getPossibleStates());
         }
-        fishermanPoiType.blockStates = ImmutableSet.copyOf(fishermanBlockStates);
-    }
+        return new PoiType(states, 1, 1);
+    });
 }
