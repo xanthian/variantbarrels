@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "variantbarrels:block/bw_dragons_blood_barrel_bottom",
-    "side": "variantbarrels:block/bw_dragons_blood_barrel_side",
-    "top": "variantbarrels:block/bw_dragons_blood_barrel_top_open"
-  }
-}

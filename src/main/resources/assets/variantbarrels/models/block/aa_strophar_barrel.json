@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "variantbarrels:block/aa_strophar_barrel_bottom",
-    "side": "variantbarrels:block/aa_strophar_barrel_side",
-    "top": "variantbarrels:block/aa_strophar_barrel_top"
-  }
-}

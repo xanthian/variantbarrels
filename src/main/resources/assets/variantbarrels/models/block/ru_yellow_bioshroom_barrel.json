@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "variantbarrels:block/ru_yellow_bioshroom_barrel_bottom",
-    "side": "variantbarrels:block/ru_yellow_bioshroom_barrel_side",
-    "top": "variantbarrels:block/ru_yellow_bioshroom_barrel_top"
-  }
-}
