@@ -3,7 +3,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "regions_unexplored"
+        "eldritch_end"
       ]
     }
   ],
@@ -25,7 +25,7 @@
               "source": "block_entity"
             }
           ],
-          "name": "variantbarrels:ru_cherry_barrel"
+          "name": "variantbarrels:ee_primordial_barrel"
         }
       ],
       "rolls": 1.0

@@ -1,9 +1,7 @@
 package net.xanthian.variantbarrels.util;
 
 import net.fabricmc.fabric.api.registry.FuelRegistry;
-
 import net.fabricmc.loader.api.FabricLoader;
-
 import net.minecraft.block.Block;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
@@ -46,6 +44,9 @@ public class ModRegistries {
         }
         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
             registry.add(DeeperAndDarker.DAD_ECHO_BARREL, 300);
+        }
+        if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
+            registry.add(EldritchEnd.EE_PRIMORDIAL_BARREL, 300);
         }
         if (FabricLoader.getInstance().isModLoaded("minecells")) {
             registry.add(MineCells.MC_PUTRID_BARREL, 300);

@@ -1,9 +1,7 @@
 package net.xanthian.variantbarrels;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.loader.api.FabricLoader;
-
 import net.fabricmc.loader.api.ModContainer;
 import net.fabricmc.loader.api.Version;
 import net.fabricmc.loader.api.metadata.ModMetadata;
@@ -16,6 +14,22 @@ import net.xanthian.variantbarrels.util.ModRegistries;
 public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantbarrels";
+
+    public static void ifModLoaded(String modId, Runnable runnable) {
+        if (FabricLoader.getInstance().isModLoaded(modId)) {
+            runnable.run();
+        }
+    }
+
+    public static boolean isModVersion(String modId, String ver) {
+        return FabricLoader.getInstance()
+                .getModContainer(modId)
+                .map(ModContainer::getMetadata)
+                .map(ModMetadata::getVersion)
+                .map(Version::getFriendlyString)
+                .filter(version -> version.startsWith(ver))
+                .isPresent();
+    }
 
     @Override
     public void onInitialize() {
@@ -31,6 +45,8 @@ public class Initialise implements ModInitializer {
         ifModLoaded("bewitchment", Bewitchment::registerBarrels);
 
         ifModLoaded("deeperdarker", DeeperAndDarker::registerBarrels);
+
+        ifModLoaded("eldritch_end", EldritchEnd::registerBarrels);
 
         ifModLoaded("minecells", MineCells::registerBarrels);
 
@@ -63,21 +79,5 @@ public class Initialise implements ModInitializer {
         //NaturesSpirit.registerBarrels();
         //DeeperAndDarker.registerBarrels();
         //AdAstra.registerBarrels();
-    }
-
-
-    public static void ifModLoaded(String modId, Runnable runnable) {
-        if (FabricLoader.getInstance().isModLoaded(modId)) {
-            runnable.run();
-        }
-    }
-    public static boolean isModVersion(String modId, String ver) {
-        return FabricLoader.getInstance()
-                .getModContainer(modId)
-                .map(ModContainer::getMetadata)
-                .map(ModMetadata::getVersion)
-                .map(Version::getFriendlyString)
-                .filter(version -> version.startsWith(ver))
-                .isPresent();
     }
 }

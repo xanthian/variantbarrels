@@ -12,20 +12,20 @@ import net.xanthian.variantbarrels.block.VariantBarrelBlock;
 
 import java.util.Map;
 
-public class TechReborn {
+public class EldritchEnd {
 
-    public static Map<Identifier, Block> TR_BARRELS = Maps.newHashMap();
+    public static Map<Identifier, Block> EE_BARRELS = Maps.newHashMap();
 
-    public static Block TR_RUBBER_BARREL;
+    public static Block EE_PRIMORDIAL_BARREL;
 
     public static void registerBarrels() {
-        TR_RUBBER_BARREL = registerBarrel("tr_rubber_barrel");
+        EE_PRIMORDIAL_BARREL = registerBarrel("ee_primordial_barrel");
     }
 
     public static Block register(String name, Block block) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
-        TR_BARRELS.put(identifier, block);
+        EE_BARRELS.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         return block;
     }

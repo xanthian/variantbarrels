@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.3-SNAPSHOT'
+	id 'fabric-loom' version '1.4-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -95,8 +95,16 @@ dependencies {
 	modApi ("dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.1")
 	modApi ("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.1")
 
+	// Blockus
+	modRuntimeOnly("curse.maven:blockus-312289:4745041") { transitive false }
+
 	// Deeper & Darker - (some sht about CustomPortalBlocks)
-	//modRuntimeOnly("curse.maven:deeperdarker-659011:4715721") {transitive false}
+	//modRuntimeOnly("curse.maven:deeperdarker-659011:4838841") {transitive false}
+
+	// Eldritch End
+	modRuntimeOnly("curse.maven:eldritch_end-877553:4846136") { transitive false }
+	modApi("curse.maven:azure_lib-817423:4829197")
+	modApi("curse.maven:necronomicon-586157:4834773")
 
 	// MineCells
 	modRuntimeOnly("curse.maven:minecells-618790:4745169") {transitive false}

@@ -2,7 +2,6 @@ package net.xanthian.variantbarrels.util;
 
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -11,7 +10,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantbarrels.Initialise;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
@@ -51,13 +49,16 @@ public class ModCreativeTab {
                         if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
                             entries.add(BetterArcheology.BA_ROTTEN_BARREL);
                         }
-                        if (FabricLoader.getInstance().isModLoaded("bewitchment")){
+                        if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
                             for (Block block : Bewitchment.BW_BARRELS.values()) {
                                 entries.add(block);
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_BARREL);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
+                            entries.add(EldritchEnd.EE_PRIMORDIAL_BARREL);
                         }
                         if (FabricLoader.getInstance().isModLoaded("minecells")) {
                             entries.add(MineCells.MC_PUTRID_BARREL);
@@ -72,7 +73,7 @@ public class ModCreativeTab {
                                 entries.add(block);
                             }
                         }
-                        if (FabricLoader.getInstance().isModLoaded("regions_unexplored")){
+                        if (FabricLoader.getInstance().isModLoaded("regions_unexplored")) {
                             entries.add(RegionsUnexplored.RU_ALPHA_OAK_BARREL);
                             entries.add(RegionsUnexplored.RU_BAOBAB_BARREL);
                             entries.add(RegionsUnexplored.RU_BLACK_PAINTED_BARREL);
@@ -106,8 +107,7 @@ public class ModCreativeTab {
                             if (isModVersion("regions_unexplored", "0.4")) {
                                 entries.add(RegionsUnexplored.RU_CHERRY_BARREL);
                                 entries.add(RegionsUnexplored.RU_SCULKWOOD_BARREL);
-                            }
-                            else {
+                            } else {
                                 entries.add(RegionsUnexplored.RU_BRIMWOOD_BARREL);
                                 entries.add(RegionsUnexplored.RU_COBALT_BARREL);
                                 entries.add(RegionsUnexplored.RU_KAPOK_BARREL);

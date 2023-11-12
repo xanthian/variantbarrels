@@ -1,26 +1,56 @@
 {
   "replace": false,
   "values": [
-    "variantbarrels:acacia_barrel",
-    "variantbarrels:bamboo_barrel",
-    "variantbarrels:birch_barrel",
-    "variantbarrels:cherry_barrel",
-    "variantbarrels:crimson_barrel",
-    "variantbarrels:dark_oak_barrel",
-    "variantbarrels:jungle_barrel",
-    "variantbarrels:mangrove_barrel",
-    "variantbarrels:oak_barrel",
-    "variantbarrels:warped_barrel",
+    {
+      "id": "variantbarrels:oak_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:warped_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:dark_oak_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:crimson_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:jungle_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:birch_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cherry_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:mangrove_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:acacia_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:bamboo_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:aa_strophar_barrel",
+      "required": false
+    },
     {
       "id": "variantbarrels:aa_aeronos_barrel",
       "required": false
     },
     {
       "id": "variantbarrels:aa_glacian_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:aa_stropar_barrel",
       "required": false
     },
     {
@@ -32,15 +62,7 @@
       "required": false
     },
     {
-      "id": "variantbarrels:bw_cypress_barrel",
-      "required": false
-    },
-    {
       "id": "variantbarrels:bw_dragons_blood_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:bw_elder_barrel",
       "required": false
     },
     {
@@ -48,11 +70,31 @@
       "required": false
     },
     {
+      "id": "variantbarrels:bw_elder_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:bw_cypress_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:dad_echo_barrel",
       "required": false
     },
     {
+      "id": "variantbarrels:ee_primordial_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:mc_putrid_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_olive_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_joshua_barrel",
       "required": false
     },
     {
@@ -64,23 +106,7 @@
       "required": false
     },
     {
-      "id": "variantbarrels:ns_fir_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ns_joshua_barrel",
-      "required": false
-    },
-    {
       "id": "variantbarrels:ns_maple_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ns_olive_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ns_redwood_barrel",
       "required": false
     },
     {
@@ -96,11 +122,11 @@
       "required": false
     },
     {
-      "id": "variantbarrels:prom_dark_amaranth_barrel",
+      "id": "variantbarrels:ns_redwood_barrel",
       "required": false
     },
     {
-      "id": "variantbarrels:prom_maple_barrel",
+      "id": "variantbarrels:ns_fir_barrel",
       "required": false
     },
     {
@@ -108,151 +134,15 @@
       "required": false
     },
     {
+      "id": "variantbarrels:prom_dark_amaranth_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:prom_sakura_barrel",
       "required": false
     },
     {
-      "id": "variantbarrels:ru_alpha_oak_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_baobab_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_black_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_blackwood_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_blue_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_brown_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_cherry_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_cyan_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_cypress_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_dead_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_eucalyptus_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_green_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_gray_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_joshua_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_larch_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_light_blue_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_light_gray_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_lime_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_magenta_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_maple_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_mauve_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_orange_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_palm_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_pine_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_pink_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_purple_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_red_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_redwood_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_sculkwood_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_white_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_willow_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_yellow_painted_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_brimwood_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_cobalt_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_kapok_barrel",
-      "required": false
-    },
-    {
-      "id": "variantbarrels:ru_magnolia_barrel",
+      "id": "variantbarrels:prom_maple_barrel",
       "required": false
     },
     {
@@ -260,7 +150,151 @@
       "required": false
     },
     {
+      "id": "variantbarrels:ru_redwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_joshua_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_brimwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_black_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_orange_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_light_gray_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cobalt_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_sculkwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_brown_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_pine_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_yellow_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_magenta_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_green_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_blackwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_red_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_palm_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cherry_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_alpha_oak_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_eucalyptus_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_baobab_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_larch_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_mauve_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_kapok_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_purple_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_gray_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_white_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_maple_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cypress_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_magnolia_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_dead_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_blue_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_willow_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:ru_yellow_bioshroom_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_lime_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_cyan_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_light_blue_painted_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_pink_painted_barrel",
       "required": false
     },
     {

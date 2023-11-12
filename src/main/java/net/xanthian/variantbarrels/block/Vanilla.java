@@ -1,22 +1,19 @@
 package net.xanthian.variantbarrels.block;
 
 import com.google.common.collect.Maps;
-
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantbarrels.Initialise;
 
 import java.util.Map;
 
 public class Vanilla {
 
-    public static Map<Identifier, Block> MOD_BARRELS = Maps.newHashMap();
+    public static Map<Identifier, Block> VANILLA_BARRELS = Maps.newHashMap();
 
     public static final VariantBarrelBlock ACACIA_BARREL = new VariantBarrelBlock();
     public static final VariantBarrelBlock BAMBOO_BARREL = new VariantBarrelBlock();
@@ -47,7 +44,7 @@ public class Vanilla {
     private static void registerBarrelBlock(String Id, Block block) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
+        VANILLA_BARRELS.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
-        MOD_BARRELS.put(identifier, block);
     }
 }

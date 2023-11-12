@@ -59,9 +59,12 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),Bewitchment.BW_DRAGONS_BLOOD_BARREL, Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_planks")), Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_slab")));
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),Bewitchment.BW_ELDER_BARREL, Registries.ITEM.get(new Identifier("bewitchment:elder_planks")), Registries.ITEM.get(new Identifier("bewitchment:elder_slab")));
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),Bewitchment.BW_JUNIPER_BARREL, Registries.ITEM.get(new Identifier("bewitchment:juniper_planks")), Registries.ITEM.get(new Identifier("bewitchment:juniper_slab")));
+
         // Deeper & Darker (disabled)
         //offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("deeperdarker")),DeeperAndDarker.DAD_ECHO_BARREL, Registries.ITEM.get(new Identifier("deeperanddarker:echo_planks")), Registries.ITEM.get(new Identifier("deeperanddarker:echo_slab")));
 
+        // Eldritch End
+        offerBarrelRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("eldritch_end")), EldritchEnd.EE_PRIMORDIAL_BARREL, Registries.ITEM.get(new Identifier("eldritch_end:primordial_planks")), Registries.ITEM.get(new Identifier("eldritch_end:primordial_slab")));
         // MineCells
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("minecells")), MineCells.MC_PUTRID_BARREL, Registries.ITEM.get(new Identifier("minecells:putrid_planks")), Registries.ITEM.get(new Identifier("minecells:putrid_slab")));
 

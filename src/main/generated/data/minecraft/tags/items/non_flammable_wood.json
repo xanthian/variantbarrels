@@ -4,6 +4,18 @@
     "variantbarrels:crimson_barrel",
     "variantbarrels:warped_barrel",
     {
+      "id": "variantcraftingtables:bls_herringbone_charred_barrel",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:bls_herringbone_crimson_barrel",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:bls_herringbone_warped_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:prom_dark_amaranth_barrel",
       "required": false
     },
