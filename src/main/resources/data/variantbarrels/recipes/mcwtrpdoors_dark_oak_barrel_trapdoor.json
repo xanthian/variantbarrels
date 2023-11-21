@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"group": "barrel_trapdoors",
+	
+    
+    "pattern":
+    [
+        " A ",
+        "ABA",
+        " A "             
+    ],
+    
+    "key":
+    { 
+        "A":
+        {
+            "item": "minecraft:dark_oak_planks"
+        },    
+        
+        "B":
+        {
+            "item": "variantbarrels:dark_oak_barrel"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "mcwtrpdoors:dark_oak_barrel_trapdoor",
+        "count": 4
+    }
+}
+
+

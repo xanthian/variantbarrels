@@ -42,6 +42,8 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("betterarcheology", BetterArcheology::registerBarrels);
 
+        ifModLoaded("biomemakeover", BiomeMakeover::registerBarrels);
+
         ifModLoaded("bewitchment", Bewitchment::registerBarrels);
 
         ifModLoaded("deeperdarker", DeeperAndDarker::registerBarrels);
@@ -78,6 +80,7 @@ public class Initialise implements ModInitializer {
         //RegionsUnexplored.register04Barrels();
         //NaturesSpirit.registerBarrels();
         //DeeperAndDarker.registerBarrels();
+        //BiomeMakeover.registerBarrels();
         //AdAstra.registerBarrels();
     }
 }

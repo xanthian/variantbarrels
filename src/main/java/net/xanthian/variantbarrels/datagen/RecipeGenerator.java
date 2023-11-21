@@ -54,6 +54,12 @@ public class RecipeGenerator extends FabricRecipeProvider {
         // Better Archeology
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("betterarcheology")),BetterArcheology.BA_ROTTEN_BARREL, Registries.ITEM.get(new Identifier("betterarcheology:rotten_planks")), Registries.ITEM.get(new Identifier("betterarcheology:rotten_slab")));
 
+        // Biome Makeover
+        //offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("biomemakeover")),BiomeMakeover.BM_ANCIENT_OAK_BARREL, Registries.ITEM.get(new Identifier("biomemakeover:ancient_oak_planks")), Registries.ITEM.get(new Identifier("biomemakeover:ancient_oak_slab")));
+        //offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("biomemakeover")),BiomeMakeover.BM_BLIGHTED_BALSA_BARREL, Registries.ITEM.get(new Identifier("biomemakeover:blighted_balsa_planks")), Registries.ITEM.get(new Identifier("biomemakeover:blighted_balsa_slab")));
+        //offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("biomemakeover")),BiomeMakeover.BM_SWAMP_CYPRESS_BARREL, Registries.ITEM.get(new Identifier("biomemakeover:swamp_cypress_planks")), Registries.ITEM.get(new Identifier("biomemakeover:swamp_cypress_slab")));
+        //offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("biomemakeover")),BiomeMakeover.BM_WILLOW_BARREL, Registries.ITEM.get(new Identifier("biomemakeover:willow_planks")), Registries.ITEM.get(new Identifier("biomemakeover:willow_slab")));
+
         // Bewitchment
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),Bewitchment.BW_CYPRESS_BARREL, Registries.ITEM.get(new Identifier("bewitchment:cypress_planks")), Registries.ITEM.get(new Identifier("bewitchment:cypress_slab")));
         offerBarrelRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),Bewitchment.BW_DRAGONS_BLOOD_BARREL, Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_planks")), Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_slab")));

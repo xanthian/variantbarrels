@@ -79,6 +79,9 @@ dependencies {
 	// BetterArcheology
 	modRuntimeOnly("curse.maven:betterarcheology-835687:4600694") {transitive false}
 
+	// Biome Makeover
+	//modRuntimeOnly("curse.maven:biome-makeover-412182:4815823")
+
 	// Bewitchment
 	modRuntimeOnly("curse.maven:bewitchment-394915:4673611") {transitive false}
 	modApi("me.lucko:fabric-permissions-api:0.1-SNAPSHOT")

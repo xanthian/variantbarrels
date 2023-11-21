@@ -49,6 +49,11 @@ public class ModCreativeTab {
                         if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
                             entries.add(BetterArcheology.BA_ROTTEN_BARREL);
                         }
+                        if (FabricLoader.getInstance().isModLoaded("biomemakeover")) {
+                            for (Block block : BiomeMakeover.BM_BARRELS.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
                             for (Block block : Bewitchment.BW_BARRELS.values()) {
                                 entries.add(block);

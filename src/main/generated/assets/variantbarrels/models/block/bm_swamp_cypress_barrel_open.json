@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "variantbarrels:block/bm_swamp_cypress_barrel_bottom",
+    "side": "variantbarrels:block/bm_swamp_cypress_barrel_side",
+    "top": "variantbarrels:block/bm_swamp_cypress_barrel_top_open"
+  }
+}

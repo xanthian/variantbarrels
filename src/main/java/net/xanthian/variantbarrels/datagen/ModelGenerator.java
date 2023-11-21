@@ -29,8 +29,8 @@ public class ModelGenerator extends FabricModelProvider {
     }
 
     public static void registerModel(BlockStateModelGenerator blockStateModelGenerator, Map<Identifier, Block> blockMap) {
-        for (Block table : blockMap.values()) {
-            createBarrel(blockStateModelGenerator, table);
+        for (Block barrel : blockMap.values()) {
+            createBarrel(blockStateModelGenerator, barrel);
         }
     }
 
@@ -41,6 +41,7 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, AdAstra.AA_BARRELS);
         registerModel(blockStateModelGenerator, BeachParty.LDBP_BARRELS);
         registerModel(blockStateModelGenerator, BetterArcheology.BA_BARRELS);
+        registerModel(blockStateModelGenerator, BiomeMakeover.BM_BARRELS);
         registerModel(blockStateModelGenerator, Bewitchment.BW_BARRELS);
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_BARRELS);
         registerModel(blockStateModelGenerator, EldritchEnd.EE_BARRELS);

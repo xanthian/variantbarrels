@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:crafting_shaped",
+	"group": "barrel_trapdoors",
+    
+    "pattern":
+    [
+        " A ",
+        "ABA",
+        " A "           
+    ],
+    
+    "key":
+    { 
+        "A":
+        {
+            "item": "minecraft:bamboo"
+        },    
+        
+        "B":
+        {
+            "item": "variantbarrels:bamboo_barrel"
+        }
+    },
+    
+    "result":
+    {
+        "item":  "mcwtrpdoors:bamboo_barrel_trapdoor",
+        "count": 4
+    }
+}
+
+

@@ -37,6 +37,11 @@ public class ModRegistries {
         if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
             registry.add(BetterArcheology.BA_ROTTEN_BARREL, 300);
         }
+        if (FabricLoader.getInstance().isModLoaded("biomemakeover")) {
+            for (Block block : BiomeMakeover.BM_BARRELS.values()) {
+                registry.add(block, 300);
+            }
+        }
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
             for (Block block : Bewitchment.BW_BARRELS.values()) {
                 registry.add(block, 300);
