@@ -43,7 +43,10 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, BetterArcheology.BA_BARRELS);
         registerModel(blockStateModelGenerator, BiomeMakeover.BM_BARRELS);
         registerModel(blockStateModelGenerator, Bewitchment.BW_BARRELS);
+        registerModel(blockStateModelGenerator, Botania.BOT_BARRELS);
+        registerModel(blockStateModelGenerator, Cinderscapes.CS_BARRELS);
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_BARRELS);
+        registerModel(blockStateModelGenerator, Desolation.DS_BARRELS);
         registerModel(blockStateModelGenerator, EldritchEnd.EE_BARRELS);
         registerModel(blockStateModelGenerator, MineCells.MC_BARRELS);
         registerModel(blockStateModelGenerator, NaturesSpirit.NS_BARRELS);

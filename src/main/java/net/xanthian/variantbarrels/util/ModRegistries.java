@@ -6,8 +6,6 @@ import net.minecraft.block.Block;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
 
-import static net.xanthian.variantbarrels.Initialise.isModVersion;
-
 public class ModRegistries {
 
     public static void registerFuelandFlammable() {
@@ -47,8 +45,21 @@ public class ModRegistries {
                 registry.add(block, 300);
             }
         }
+        if (FabricLoader.getInstance().isModLoaded("botania")) {
+            for (Block block : Botania.BOT_BARRELS.values()) {
+                registry.add(block, 300);
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+            for (Block block : Cinderscapes.CS_BARRELS.values()) {
+                registry.add(block, 300);
+            }
+        }
         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
             registry.add(DeeperAndDarker.DAD_ECHO_BARREL, 300);
+        }
+        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+            registry.add(Desolation.DS_CHARRED_BARREL, 300);
         }
         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
             registry.add(EldritchEnd.EE_PRIMORDIAL_BARREL, 300);
@@ -96,14 +107,17 @@ public class ModRegistries {
             registry.add(RegionsUnexplored.RU_WHITE_PAINTED_BARREL, 300);
             registry.add(RegionsUnexplored.RU_WILLOW_BARREL, 300);
             registry.add(RegionsUnexplored.RU_YELLOW_PAINTED_BARREL, 300);
-            if (isModVersion("regions_unexplored", "0.4")) {
-                registry.add(RegionsUnexplored.RU_CHERRY_BARREL, 300);
-                registry.add(RegionsUnexplored.RU_SCULKWOOD_BARREL, 300);
-            } else {
-                registry.add(RegionsUnexplored.RU_KAPOK_BARREL, 300);
-                registry.add(RegionsUnexplored.RU_MAGNOLIA_BARREL, 300);
-                registry.add(RegionsUnexplored.RU_SOCOTRA_BARREL, 300);
-            }
+
+            registry.add(RegionsUnexplored.RU_CHERRY_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_SCULKWOOD_BARREL, 300);
+
+            registry.add(RegionsUnexplored.RU_BLUE_BIOSHROOM_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_GREEN_BIOSHROOM_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_KAPOK_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_MAGNOLIA_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_PINK_BIOSHROOM_BARREL, 300);
+            registry.add(RegionsUnexplored.RU_SOCOTRA_BARREL, 300);
+
         }
         if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
             registry.add(SnifferPlus.SP_STONE_PINE_BARREL, 300);

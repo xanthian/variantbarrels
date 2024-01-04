@@ -94,7 +94,31 @@
       "required": false
     },
     {
+      "id": "variantbarrels:bot_shimmerwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:bot_livingwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:bot_dreamwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cs_umbral_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cs_scorched_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:dad_echo_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ds_charred_barrel",
       "required": false
     },
     {
@@ -166,6 +190,10 @@
       "required": false
     },
     {
+      "id": "variantbarrels:ru_green_bioshroom_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:ru_redwood_barrel",
       "required": false
     },
@@ -226,6 +254,10 @@
       "required": false
     },
     {
+      "id": "variantbarrels:ru_pink_bioshroom_barrel",
+      "required": false
+    },
+    {
       "id": "variantbarrels:ru_palm_barrel",
       "required": false
     },
@@ -243,6 +275,10 @@
     },
     {
       "id": "variantbarrels:ru_baobab_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ru_blue_bioshroom_barrel",
       "required": false
     },
     {

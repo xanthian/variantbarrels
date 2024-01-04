@@ -5,6 +5,7 @@ build/
 out/
 classes/
 
+
 # eclipse
 
 *.launch
@@ -32,3 +33,4 @@ bin/
 
 run/
 /src/main/generated/.cache/
+secrets/

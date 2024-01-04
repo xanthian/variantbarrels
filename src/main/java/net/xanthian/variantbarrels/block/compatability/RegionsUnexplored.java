@@ -50,10 +50,13 @@ public class RegionsUnexplored {
     public static Block RU_CHERRY_BARREL;
     public static Block RU_SCULKWOOD_BARREL;
 
+    public static Block RU_BLUE_BIOSHROOM_BARREL;
     public static Block RU_BRIMWOOD_BARREL;
     public static Block RU_COBALT_BARREL;
+    public static Block RU_GREEN_BIOSHROOM_BARREL;
     public static Block RU_KAPOK_BARREL;
     public static Block RU_MAGNOLIA_BARREL;
+    public static Block RU_PINK_BIOSHROOM_BARREL;
     public static Block RU_SOCOTRA_BARREL;
     public static Block RU_YELLOW_BIOSHROOM_BARREL;
 
@@ -89,18 +92,17 @@ public class RegionsUnexplored {
         RU_WHITE_PAINTED_BARREL = registerBarrel("ru_white_painted_barrel");
         RU_WILLOW_BARREL = registerBarrel("ru_willow_barrel");
         RU_YELLOW_PAINTED_BARREL = registerBarrel("ru_yellow_painted_barrel");
-    }
 
-    public static void register04Barrels() {
         RU_CHERRY_BARREL = registerBarrel("ru_cherry_barrel");
         RU_SCULKWOOD_BARREL = registerBarrel("ru_sculkwood_barrel");
-    }
 
-    public static void register05Barrels() {
+        RU_BLUE_BIOSHROOM_BARREL = registerBarrel("ru_blue_bioshroom_barrel");
         RU_BRIMWOOD_BARREL = registerBarrel("ru_brimwood_barrel");
         RU_COBALT_BARREL = registerBarrel("ru_cobalt_barrel");
+        RU_GREEN_BIOSHROOM_BARREL = registerBarrel("ru_green_bioshroom_barrel");
         RU_KAPOK_BARREL = registerBarrel("ru_kapok_barrel");
         RU_MAGNOLIA_BARREL = registerBarrel("ru_magnolia_barrel");
+        RU_PINK_BIOSHROOM_BARREL = registerBarrel("ru_pink_bioshroom_barrel");
         RU_SOCOTRA_BARREL = registerBarrel("ru_socotra_barrel");
         RU_YELLOW_BIOSHROOM_BARREL = registerBarrel("ru_yellow_bioshroom_barrel");
     }

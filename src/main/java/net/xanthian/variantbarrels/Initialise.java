@@ -2,9 +2,6 @@ package net.xanthian.variantbarrels;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
-import net.fabricmc.loader.api.Version;
-import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
 import net.xanthian.variantbarrels.util.ModCreativeTab;
@@ -19,16 +16,6 @@ public class Initialise implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded(modId)) {
             runnable.run();
         }
-    }
-
-    public static boolean isModVersion(String modId, String ver) {
-        return FabricLoader.getInstance()
-                .getModContainer(modId)
-                .map(ModContainer::getMetadata)
-                .map(ModMetadata::getVersion)
-                .map(Version::getFriendlyString)
-                .filter(version -> version.startsWith(ver))
-                .isPresent();
     }
 
     @Override
@@ -46,7 +33,13 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("bewitchment", Bewitchment::registerBarrels);
 
+        ifModLoaded("botania", Botania::registerBarrels);
+
+        ifModLoaded("cinderscapes", Cinderscapes::registerBarrels);
+
         ifModLoaded("deeperdarker", DeeperAndDarker::registerBarrels);
+
+        ifModLoaded("desolation", Desolation::registerBarrels);
 
         ifModLoaded("eldritch_end", EldritchEnd::registerBarrels);
 
@@ -56,14 +49,7 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("promenade", Promenade::registerBarrels);
 
-        ifModLoaded("regions_unexplored", () -> {
-            RegionsUnexplored.registerBarrels();
-            if (isModVersion("regions_unexplored", "0.4")) {
-                RegionsUnexplored.register04Barrels();
-            } else {
-                RegionsUnexplored.register05Barrels();
-            }
-        });
+        ifModLoaded("regions_unexplored", RegionsUnexplored::registerBarrels);
 
         ifModLoaded("snifferplus", SnifferPlus::registerBarrels);
 
@@ -76,11 +62,7 @@ public class Initialise implements ModInitializer {
         ModPOITypes.init();
 
         // Datagen Block - disable for client run
+        //Botania.registerBarrels();
         //SnifferPlus.registerBarrels();
-        //RegionsUnexplored.register04Barrels();
-        //NaturesSpirit.registerBarrels();
-        //DeeperAndDarker.registerBarrels();
-        //BiomeMakeover.registerBarrels();
-        //AdAstra.registerBarrels();
     }
 }

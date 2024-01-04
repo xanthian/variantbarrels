@@ -13,8 +13,6 @@ import java.util.Map;
 
 public class Vanilla {
 
-    public static Map<Identifier, Block> VANILLA_BARRELS = Maps.newHashMap();
-
     public static final VariantBarrelBlock ACACIA_BARREL = new VariantBarrelBlock();
     public static final VariantBarrelBlock BAMBOO_BARREL = new VariantBarrelBlock();
     public static final VariantBarrelBlock BIRCH_BARREL = new VariantBarrelBlock();
@@ -26,6 +24,7 @@ public class Vanilla {
     public static final VariantBarrelBlock OAK_BARREL = new VariantBarrelBlock();
     // Vanila Barrel block is made from Spruce
     public static final VariantBarrelBlock WARPED_BARREL = new VariantBarrelBlock();
+    public static Map<Identifier, Block> VANILLA_BARRELS = Maps.newHashMap();
 
     public static void registerBarrels() {
         registerBarrelBlock("acacia_barrel", ACACIA_BARREL);

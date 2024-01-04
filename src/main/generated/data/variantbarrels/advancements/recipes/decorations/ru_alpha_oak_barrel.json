@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "regions_unexplored"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "regions_unexplored"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "regions_unexplored:alpha_oak_planks"
+          ]
+        }
       ]
     }
   ],
@@ -14,7 +26,7 @@
         "items": [
           {
             "items": [
-              "regions_unexplored:alpha_planks"
+              "minecraft:air"
             ]
           }
         ]
@@ -32,7 +44,7 @@
         "items": [
           {
             "items": [
-              "regions_unexplored:alpha_slab"
+              "minecraft:air"
             ]
           }
         ]

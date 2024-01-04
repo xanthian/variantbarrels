@@ -21,6 +21,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
     private static final TagKey<Item> C_JOB_SITE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:villager_job_sites"));
     private static final TagKey<Item> C_BARREL = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:barrel"));
     private static final TagKey<Item> C_WOODEN_BARRELS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:wooden_barrels"));
+
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
@@ -35,7 +36,10 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         registerTags(BetterArcheology.BA_BARRELS);
         registerTags(BiomeMakeover.BM_BARRELS);
         registerTags(Bewitchment.BW_BARRELS);
+        registerTags(Botania.BOT_BARRELS);
+        registerTags(Cinderscapes.CS_BARRELS);
         registerTags(DeeperAndDarker.DAD_BARRELS);
+        registerTags(Desolation.DS_BARRELS);
         registerTags(EldritchEnd.EE_BARRELS);
         registerTags(MineCells.MC_BARRELS);
         registerTags(NaturesSpirit.NS_BARRELS);
