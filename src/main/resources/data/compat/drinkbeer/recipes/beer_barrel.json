@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XY ",
+    "   ",
+    "   "
+  ],
+  "key": {
+    "X": {
+      "tag": "variantbarrels:barrels"
+    },
+    "Y": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "drinkbeer:beer_barrel",
+    "count":1
+  }
+}

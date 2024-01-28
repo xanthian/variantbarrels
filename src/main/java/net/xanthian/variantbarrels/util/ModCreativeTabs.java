@@ -1,6 +1,7 @@
 package net.xanthian.variantbarrels.util;
 
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -20,6 +21,7 @@ public class ModCreativeTabs {
 
     public static final RegistryObject<CreativeModeTab> VCB_TAB = CREATIVE_MODE_TABS.register("variantbarrels",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Vanilla.MANGROVE_BARREL.get()))
+                    .title(Component.literal("Variant Barrels"))
                     .hideTitle()
                     .withBackgroundLocation(new ResourceLocation(Initialise.MOD_ID, "textures/gui/container/creative_inventory/tab_variantbarrels.png"))
                     .displayItems((pParameters, pOutput) -> {
