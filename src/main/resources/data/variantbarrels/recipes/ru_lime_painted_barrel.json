@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "modid": "regions_unexplored",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "regions_unexplored:lime_painted_planks"
+    },
+    "S": {
+      "item": "regions_unexplored:lime_painted_slab"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "result": {
+    "item": "variantbarrels:ru_lime_painted_barrel"
+  },
+  "show_notification": true
+}

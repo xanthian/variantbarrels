@@ -2,10 +2,11 @@ package net.xanthian.variantbarrels;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import net.xanthian.variantbarrels.block.Vanilla;
+import net.xanthian.variantbarrels.block.compat.RegionsUnexplored;
 import net.xanthian.variantbarrels.item.ModItems;
 import net.xanthian.variantbarrels.util.ModCreativeTabs;
 import net.xanthian.variantbarrels.util.ModPOITypes;
@@ -28,5 +29,8 @@ public class Initialise {
         ModItems.ITEMS.register(modEventBus);
 
         MinecraftForge.EVENT_BUS.register(this);
+
+        ModList.get().getModContainerById("regions_unexplored").ifPresent(modContainer
+                -> RegionsUnexplored.BLOCKS.register(modEventBus));
     }
 }

@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "modid": "regions_unexplored",
+      "type": "forge:mod_loaded"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "regions_unexplored:redwood_planks"
+    },
+    "S": {
+      "item": "regions_unexplored:redwood_slab"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "P P",
+    "PSP"
+  ],
+  "result": {
+    "item": "variantbarrels:ru_redwood_barrel"
+  },
+  "show_notification": true
+}
