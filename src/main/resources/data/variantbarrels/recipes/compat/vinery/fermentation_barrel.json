@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "modid": "vinery",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "group": "fermentation_barrel",
   "pattern": [

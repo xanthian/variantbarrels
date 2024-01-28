@@ -1,4 +1,10 @@
 {
+	"conditions": [
+		{
+			"modid": "buildersaddition",
+			"type": "forge:mod_loaded"
+		}
+	],
 	"type": "minecraft:crafting_shapeless",
 	"ingredients": [
 		{

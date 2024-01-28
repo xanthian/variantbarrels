@@ -1,4 +1,10 @@
 {
+  "conditions": [
+    {
+      "modid": "drinkbeer",
+      "type": "forge:mod_loaded"
+    }
+  ],
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "XY ",
