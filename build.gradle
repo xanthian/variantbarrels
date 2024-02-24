@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.4-SNAPSHOT'
+	id 'fabric-loom' version '1.5-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -162,8 +162,8 @@ dependencies {
 	//modRuntimeOnly("maven.modrinth:BVgHoKxg:DLjYM0KE")
 
 	// Tech Reborn
-	modRuntimeOnly("TechReborn:TechReborn-1.20:5.8.3") { transitive false }
-	modRuntimeOnly("RebornCore:RebornCore-1.20:5.8.3")
+	modRuntimeOnly("TechReborn:TechReborn-1.20:5.10.3") { transitive false }
+	modRuntimeOnly("RebornCore:RebornCore-1.20:5.10.3")
 
 	// Vinery
 	modRuntimeOnly("curse.maven:vinery-704465:4643442") { transitive false }

@@ -6,9 +6,10 @@ import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.VanillaRecipeProvider;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -28,16 +29,16 @@ public class RecipeGenerator extends FabricRecipeProvider {
         super(output);
     }
 
-    public static void offerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
+    public static void offerBarrelRecipe(RecipeExporter exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, barrel, 1)
                 .input('P', plank).input('S', slab)
                 .pattern("PSP").pattern("P P").pattern("PSP")
-                .criterion("has_planks", FabricRecipeProvider.conditionsFromItem(plank)).criterion("has_wood_slab", FabricRecipeProvider.conditionsFromItem(slab))
+                .criterion("has_planks", VanillaRecipeProvider.conditionsFromItem(plank)).criterion("has_wood_slab", VanillaRecipeProvider.conditionsFromItem(slab))
                 .offerTo(exporter);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerBarrelRecipe(exporter, Vanilla.ACACIA_BARREL, Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB);
         offerBarrelRecipe(exporter, Vanilla.BAMBOO_BARREL, Blocks.BAMBOO_PLANKS, Blocks.BAMBOO_SLAB);
@@ -77,11 +78,11 @@ public class RecipeGenerator extends FabricRecipeProvider {
 
     }
 
-    public void registerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> barrel, String modId) {
+    public void registerBarrelRecipe(RecipeExporter exporter, Map<Identifier, Block> barrel, String modId) {
         registerBarrelRecipe(exporter, barrel, modId, "_planks", "_slab");
     }
 
-    public void registerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> bookshelves, String modId, String plankSuffix, String slabSuffix) {
+    public void registerBarrelRecipe(RecipeExporter exporter, Map<Identifier, Block> bookshelves, String modId, String plankSuffix, String slabSuffix) {
         for (Map.Entry<Identifier, Block> entry : bookshelves.entrySet()) {
             Identifier bookshelfId = entry.getKey();
             Block bookshelf = entry.getValue();
