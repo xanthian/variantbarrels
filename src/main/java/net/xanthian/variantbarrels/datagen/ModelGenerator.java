@@ -19,7 +19,7 @@ public class ModelGenerator extends FabricModelProvider {
 
     public static void createBarrel(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = TextureMap.getSubId(block, "_top_open");
-        Identifier modelLocation = new Identifier(identifier.getNamespace(), "block/");
+        Identifier modelLocation = Identifier.of(identifier.getNamespace(), "block/");
         (new TextureMap()).put(TextureKey.PARTICLE, modelLocation).put(TextureKey.TOP, modelLocation).put(TextureKey.BOTTOM, modelLocation).put(TextureKey.SIDE, modelLocation);
         blockStateModelGenerator.blockStateCollector.accept(VariantsBlockStateSupplier.create(block).coordinate(blockStateModelGenerator.createUpDefaultFacingVariantMap())
                 .coordinate(BlockStateVariantMap.create(Properties.OPEN).register(false, BlockStateVariant.create()

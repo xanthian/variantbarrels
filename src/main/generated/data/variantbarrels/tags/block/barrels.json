@@ -1,0 +1,96 @@
+{
+  "values": [
+    {
+      "id": "variantbarrels:oak_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:warped_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:dark_oak_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:crimson_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:jungle_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:birch_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cherry_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:mangrove_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:acacia_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:bamboo_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cs_umbral_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:cs_scorched_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_olive_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_joshua_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_aspen_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_cypress_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_maple_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_sugi_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_willow_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_wisteria_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_redwood_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:ns_fir_barrel",
+      "required": false
+    },
+    {
+      "id": "variantbarrels:tr_rubber_barrel",
+      "required": false
+    }
+  ]
+}

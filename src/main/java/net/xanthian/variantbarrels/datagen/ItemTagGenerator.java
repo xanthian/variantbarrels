@@ -18,9 +18,9 @@ import java.util.concurrent.CompletableFuture;
 import static net.xanthian.variantbarrels.util.ModItemTags.BARRELS;
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
-    private static final TagKey<Item> C_JOB_SITE = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:villager_job_sites"));
-    private static final TagKey<Item> C_BARREL = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:barrel"));
-    private static final TagKey<Item> C_WOODEN_BARRELS = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:wooden_barrels"));
+    private static final TagKey<Item> C_JOB_SITE = TagKey.of(Registries.ITEM.getKey(), Identifier.of("c:villager_job_sites"));
+    private static final TagKey<Item> C_BARREL = TagKey.of(Registries.ITEM.getKey(), Identifier.of("c:barrel"));
+    private static final TagKey<Item> C_WOODEN_BARRELS = TagKey.of(Registries.ITEM.getKey(), Identifier.of("c:wooden_barrels"));
 
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -53,11 +53,11 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                 .add(Vanilla.CRIMSON_BARREL.asItem())
                 .add(Vanilla.WARPED_BARREL.asItem())
-                .addOptional(new Identifier("variantbarrels:prom_dark_amaranth_barrel"))
-                .addOptional(new Identifier("variantbarrels:ru_brimwood_barrel"))
-                .addOptional(new Identifier("variantbarrels:ru_cobalt_barrel"))
-                .addOptional(new Identifier("variantbarrels:ru_dead_barrel"))
-                .addOptional(new Identifier("variantbarrels:ru_yellow_bioshroom_barrel"));
+                .addOptional(Identifier.of("variantbarrels:prom_dark_amaranth_barrel"))
+                .addOptional(Identifier.of("variantbarrels:ru_brimwood_barrel"))
+                .addOptional(Identifier.of("variantbarrels:ru_cobalt_barrel"))
+                .addOptional(Identifier.of("variantbarrels:ru_dead_barrel"))
+                .addOptional(Identifier.of("variantbarrels:ru_yellow_bioshroom_barrel"));
 
         getOrCreateTagBuilder(C_JOB_SITE)
                 .addTag(BARRELS);
@@ -72,9 +72,9 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
     private void registerTags(Map<Identifier, Block> blockMap) {
         for (Block block : blockMap.values()) {
-            Identifier lootTableId = block.getLootTableId();
+            Identifier lootTableId = block.getLootTableKey().getValue();
             String newPath = lootTableId.getPath().replaceFirst("blocks/", "");
-            Identifier modifiedId = new Identifier(lootTableId.getNamespace(), newPath);
+            Identifier modifiedId = Identifier.of(lootTableId.getNamespace(), newPath);
 
             getOrCreateTagBuilder(BARRELS)
                     .addOptional(modifiedId);

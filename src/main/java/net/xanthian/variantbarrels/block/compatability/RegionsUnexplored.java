@@ -1,7 +1,7 @@
 package net.xanthian.variantbarrels.block.compatability;
 
 import com.google.common.collect.Maps;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.Item;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
@@ -47,9 +47,6 @@ public class RegionsUnexplored {
     public static Block RU_WILLOW_BARREL;
     public static Block RU_YELLOW_PAINTED_BARREL;
 
-    public static Block RU_CHERRY_BARREL;
-    public static Block RU_SCULKWOOD_BARREL;
-
     public static Block RU_BLUE_BIOSHROOM_BARREL;
     public static Block RU_BRIMWOOD_BARREL;
     public static Block RU_COBALT_BARREL;
@@ -93,9 +90,6 @@ public class RegionsUnexplored {
         RU_WILLOW_BARREL = registerBarrel("ru_willow_barrel");
         RU_YELLOW_PAINTED_BARREL = registerBarrel("ru_yellow_painted_barrel");
 
-        RU_CHERRY_BARREL = registerBarrel("ru_cherry_barrel");
-        RU_SCULKWOOD_BARREL = registerBarrel("ru_sculkwood_barrel");
-
         RU_BLUE_BIOSHROOM_BARREL = registerBarrel("ru_blue_bioshroom_barrel");
         RU_BRIMWOOD_BARREL = registerBarrel("ru_brimwood_barrel");
         RU_COBALT_BARREL = registerBarrel("ru_cobalt_barrel");
@@ -108,10 +102,10 @@ public class RegionsUnexplored {
     }
 
     public static Block register(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name);
+        Identifier identifier = Identifier.of(Initialise.MOD_ID, name);
         Registry.register(Registries.BLOCK, identifier, block);
         RU_BARRELS.put(identifier, block);
-        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new Item.Settings()));
         return block;
     }
 

@@ -2,11 +2,11 @@ package net.xanthian.variantbarrels.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.ItemConvertible;
@@ -15,20 +15,21 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compatability.*;
 import net.xanthian.variantbarrels.util.ModItemTags;
 
 import java.util.Map;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class RecipeGenerator extends FabricRecipeProvider {
-    public RecipeGenerator(FabricDataOutput output) {
-        super(output);
+    public RecipeGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
-    public static void offerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
+    public static void offerBarrelRecipe(RecipeExporter exporter, ItemConvertible barrel, ItemConvertible plank, ItemConvertible slab) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, barrel, 1)
                 .input('P', plank).input('S', slab)
                 .pattern("PSP").pattern("P P").pattern("PSP")
@@ -37,7 +38,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerBarrelRecipe(exporter, Vanilla.ACACIA_BARREL, Blocks.ACACIA_PLANKS, Blocks.ACACIA_SLAB);
         offerBarrelRecipe(exporter, Vanilla.BAMBOO_BARREL, Blocks.BAMBOO_PLANKS, Blocks.BAMBOO_SLAB);
@@ -73,15 +74,15 @@ public class RecipeGenerator extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.DECORATIONS, Items.BARREL)
                 .input(ModItemTags.BARRELS)
                 .criterion("has_barrel", InventoryChangedCriterion.Conditions.items(Items.BARREL))
-                .offerTo(exporter, new Identifier("variantbarrels", "barrel"));
+                .offerTo(exporter, Identifier.of("variantbarrels", "barrel"));
 
     }
 
-    public void registerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> barrel, String modId) {
+    public void registerBarrelRecipe(RecipeExporter exporter, Map<Identifier, Block> barrel, String modId) {
         registerBarrelRecipe(exporter, barrel, modId, "_planks", "_slab");
     }
 
-    public void registerBarrelRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> bookshelves, String modId, String plankSuffix, String slabSuffix) {
+    public void registerBarrelRecipe(RecipeExporter exporter, Map<Identifier, Block> bookshelves, String modId, String plankSuffix, String slabSuffix) {
         for (Map.Entry<Identifier, Block> entry : bookshelves.entrySet()) {
             Identifier bookshelfId = entry.getKey();
             Block bookshelf = entry.getValue();
@@ -89,9 +90,9 @@ public class RecipeGenerator extends FabricRecipeProvider {
             String name = path.replace("variantbarrels:", "").replace("_barrel", "").replaceFirst("^[^_]+_", "");
             String plankPath = modId + ":" + name + plankSuffix;
             String slabPath = modId + ":" + name + slabSuffix;
-            offerBarrelRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded(modId),
-                            DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier(plankPath))))),
-                    bookshelf, Registries.ITEM.get(new Identifier(plankPath)), Registries.ITEM.get(new Identifier(slabPath)));
+            offerBarrelRecipe(withConditions(exporter, ResourceConditions.and(ResourceConditions.allModsLoaded(modId),
+                            ResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(plankPath))))),
+                    bookshelf, Registries.ITEM.get(Identifier.of(plankPath)), Registries.ITEM.get(Identifier.of(slabPath)));
         }
     }
 }

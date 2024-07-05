@@ -23,39 +23,23 @@ public class Initialise implements ModInitializer {
 
         Vanilla.registerBarrels();
 
-        ifModLoaded("ad_astra", AdAstra::registerBarrels);
-
-        ifModLoaded("beachparty", BeachParty::registerBarrels);
-
-        ifModLoaded("betterarcheology", BetterArcheology::registerBarrels);
-
-        ifModLoaded("biomemakeover", BiomeMakeover::registerBarrels);
-
-        ifModLoaded("bewitchment", Bewitchment::registerBarrels);
-
-        ifModLoaded("botania", Botania::registerBarrels);
-
+        //ifModLoaded("ad_astra", AdAstra::registerBarrels);
+        //ifModLoaded("beachparty", BeachParty::registerBarrels);
+        //ifModLoaded("betterarcheology", BetterArcheology::registerBarrels);
+        //ifModLoaded("biomemakeover", BiomeMakeover::registerBarrels);
+        //ifModLoaded("bewitchment", Bewitchment::registerBarrels);
+        //ifModLoaded("botania", Botania::registerBarrels);
         ifModLoaded("cinderscapes", Cinderscapes::registerBarrels);
-
-        ifModLoaded("deeperdarker", DeeperAndDarker::registerBarrels);
-
-        ifModLoaded("desolation", Desolation::registerBarrels);
-
-        ifModLoaded("eldritch_end", EldritchEnd::registerBarrels);
-
-        ifModLoaded("minecells", MineCells::registerBarrels);
-
+        //ifModLoaded("deeperdarker", DeeperAndDarker::registerBarrels);
+        //ifModLoaded("desolation", Desolation::registerBarrels);
+        //ifModLoaded("eldritch_end", EldritchEnd::registerBarrels);
+        //ifModLoaded("minecells", MineCells::registerBarrels);
         ifModLoaded("natures_spirit", NaturesSpirit::registerBarrels);
-
-        ifModLoaded("promenade", Promenade::registerBarrels);
-
-        ifModLoaded("regions_unexplored", RegionsUnexplored::registerBarrels);
-
-        ifModLoaded("snifferplus", SnifferPlus::registerBarrels);
-
+        //ifModLoaded("promenade", Promenade::registerBarrels);
+        //ifModLoaded("regions_unexplored", RegionsUnexplored::registerBarrels);
+        //ifModLoaded("snifferplus", SnifferPlus::registerBarrels);
         ifModLoaded("techreborn", TechReborn::registerBarrels);
-
-        ifModLoaded("vinery", Vinery::registerBarrels);
+        //ifModLoaded("vinery", Vinery::registerBarrels);
 
         ModRegistries.registerFuelandFlammable();
         ModCreativeTab.registerItemGroup();
