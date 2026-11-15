@@ -1,0 +1,8 @@
+modLoader="lowcodefml"
+loaderVersion="[52,)"
+license="MIT"
+
+[[mods]]
+modId="variantbarrels_tests"
+version="1.0"
+displayName="Variant Barrels Game Tests"

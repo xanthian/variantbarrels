@@ -3,6 +3,7 @@ package net.xanthian.variantbarrels.util;
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,6 +23,8 @@ public class ModPOITypes {
 
     private static Set<BlockState> getPOIBlockStates() {
         Set<BlockState> states = new HashSet<>();
+        // Retain the vanilla workstation when replacing the fisherman POI.
+        states.addAll(Blocks.BARREL.getStateDefinition().getPossibleStates());
 
         ForgeRegistries.BLOCKS.getValues().stream()
                 .filter(ModPOITypes::isVariantBarrel)

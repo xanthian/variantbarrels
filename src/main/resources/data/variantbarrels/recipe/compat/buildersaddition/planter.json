@@ -1,0 +1,19 @@
+{
+  "forge:condition": {
+    "type": "forge:mod_loaded",
+    "modid": "buildersaddition"
+  },
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+		    "item": "minecraft:dirt"
+		},
+		{
+			"tag": "variantbarrels:barrels"
+		}
+	],
+	"result":{
+		"id": "buildersaddition:planter",
+		"count": 1
+	}
+}

@@ -23,7 +23,7 @@ public class ModCreativeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Vanilla.MANGROVE_BARREL.get()))
                     .title(Component.literal("Variant Barrels"))
                     .hideTitle()
-                    .withBackgroundLocation(new ResourceLocation(Initialise.MOD_ID, "textures/gui/container/creative_inventory/tab_variantbarrels.png"))
+                    .backgroundTexture(ResourceLocation.fromNamespaceAndPath(Initialise.MOD_ID, "textures/gui/container/creative_inventory/tab_variantbarrels.png"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(Vanilla.ACACIA_BARREL.get());
                         pOutput.accept(Vanilla.BAMBOO_BARREL.get());

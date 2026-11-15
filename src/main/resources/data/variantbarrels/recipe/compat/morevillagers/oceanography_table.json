@@ -1,0 +1,21 @@
+{
+  "forge:condition": {
+    "type": "forge:mod_loaded",
+    "modid": "morevillagers"
+  },
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "tag": "variantbarrels:barrels"
+    }
+  ],
+  "result": {
+    "id": "morevillagers:oceanography_table"
+  }
+}

@@ -22,26 +22,26 @@ public class Vanilla {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Initialise.MOD_ID);
 
     public static final RegistryObject<Block> ACACIA_BARREL = register("acacia_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.ACACIA_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS)), 300);
     public static final RegistryObject<Block> BAMBOO_BARREL = register("bamboo_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_PLANKS)), 300);
     public static final RegistryObject<Block> BIRCH_BARREL = register("birch_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS)), 300);
     public static final RegistryObject<Block> CHERRY_BARREL = register("cherry_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS)), 300);
     public static final RegistryObject<Block> CRIMSON_BARREL = register("crimson_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)), 0);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRIMSON_PLANKS)), 0);
     public static final RegistryObject<Block> DARK_OAK_BARREL = register("dark_oak_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.DARK_OAK_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS)), 300);
     public static final RegistryObject<Block> JUNGLE_BARREL = register("jungle_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS)), 300);
     public static final RegistryObject<Block> MANGROVE_BARREL = register("mangrove_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.MANGROVE_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS)), 300);
     public static final RegistryObject<Block> OAK_BARREL = register("oak_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)), 300);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)), 300);
 
     public static final RegistryObject<Block> WARPED_BARREL = register("warped_barrel",
-            () -> new VariantBarrelBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_PLANKS)), 0);
+            () -> new VariantBarrelBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WARPED_PLANKS)), 0);
 
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, int burnTime) {
