@@ -1,4 +1,4 @@
-package net.xanthian.variantbarrels.util;
+package net.xanthian.variantbarrels.platform.forge;
 
 import com.google.common.collect.ImmutableSet;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
@@ -15,7 +15,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.function.Consumer;
 
-public class ModPOITypes {
+public class ForgePoiTypes {
 
     public static DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, "minecraft");
     public static RegistryObject<PoiType> FISHERMAN = POI_TYPES.register("fisherman", () ->
@@ -27,7 +27,7 @@ public class ModPOITypes {
         states.addAll(Blocks.BARREL.getStateDefinition().getPossibleStates());
 
         ForgeRegistries.BLOCKS.getValues().stream()
-                .filter(ModPOITypes::isVariantBarrel)
+                .filter(ForgePoiTypes::isVariantBarrel)
                 .forEach(addAllBlockStates(states));
         return states;
     }

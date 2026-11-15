@@ -14,6 +14,19 @@ base {
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
+sourceSets.main.java.srcDir('src/forge/java')
+sourceSets.test.java.srcDir('src/forgeTest/java')
+
+// Test the release jar, rather than a second copy of the gameplay classes.
+sourceSets {
+    jarTest {
+        java.srcDirs = sourceSets.test.java.srcDirs
+        resources.srcDirs = sourceSets.test.resources.srcDirs
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.runtimeClasspath - sourceSets.main.output
+    }
+}
+
 // Forge's development launcher scans each output directory as a single mod.
 sourceSets.configureEach {
     output.resourcesDir = java.destinationDirectory.get().asFile
@@ -64,9 +77,8 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', mod_id
 
             mods {
-                "${mod_id}" {
-                    source sourceSets.main
-                    source sourceSets.test
+                variantbarrels_tests {
+                    source sourceSets.jarTest
                 }
             }
         }
@@ -103,6 +115,7 @@ def replaceProperties = [
 dependencies {
 
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+    jarTestImplementation files(tasks.named('jar'))
 
 }
 
@@ -117,6 +130,12 @@ processResources {
 }
 
 jar {
+    archiveClassifier = 'universal'
+    dependsOn ':neoforge:classes'
+    from(provider { project(':neoforge').sourceSets.main.output }) {
+        include 'net/xanthian/variantbarrels/platform/neoforge/**'
+        include 'META-INF/neoforge.mods.toml'
+    }
     manifest {
         attributes([
                 "Specification-Title"     : mod_id,
@@ -128,6 +147,10 @@ jar {
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
+}
+
+tasks.named('build') {
+    dependsOn ':neoforge:check'
 }
 
 publishing {

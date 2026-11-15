@@ -2,7 +2,8 @@ package net.xanthian.variantbarrels.gametest;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.gametest.framework.GameTest;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.gametest.framework.GameTestHelper;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -13,26 +14,26 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BarrelBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.gametest.GameTestHolder;
-import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraft.tags.TagKey;
 import net.xanthian.variantbarrels.Initialise;
 import net.xanthian.variantbarrels.block.VariantBarrelBlock;
 import net.xanthian.variantbarrels.block.entity.ModBlockEntities;
 
-@GameTestHolder(Initialise.MOD_ID)
-public class VariantBarrelsGameTests {
-    @GameTest(template = "variantbarrels_tests:empty")
-    public static void barrelsPreserveInventoryAndName(GameTestHelper helper) {
+public class BarrelChecks {
+    public static void checkBarrels(GameTestHelper helper) {
+        String origin = Initialise.class.getProtectionDomain().getCodeSource().getLocation().toString();
+        helper.assertTrue(origin.contains("-universal.jar"), "Tests must load the packaged universal jar; actual source: " + origin);
         var level = helper.getLevel();
         var registries = level.registryAccess();
         var pos = new BlockPos(1, 1, 1);
 
-        for (Block block : ForgeRegistries.BLOCKS.getValues()) {
+        int checked = 0;
+        for (Block block : BuiltInRegistries.BLOCK) {
             if (!(block instanceof VariantBarrelBlock)) {
                 continue;
             }
-            String id = ForgeRegistries.BLOCKS.getKey(block).toString();
+            checked++;
+            String id = BuiltInRegistries.BLOCK.getKey(block).toString();
             helper.setBlock(pos, block);
             var barrel = (BarrelBlockEntity) helper.getBlockEntity(pos);
             helper.assertTrue(barrel != null && barrel.getType() == ModBlockEntities.BARREL.get(), id + " must have a valid block entity");
@@ -48,8 +49,8 @@ public class VariantBarrelsGameTests {
             helper.assertTrue(Component.literal("Stored supplies").equals(loaded.getCustomName()), id + " must preserve its name");
 
             helper.assertTrue(PoiTypes.forState(block.defaultBlockState()).orElseThrow().is(PoiTypes.FISHERMAN), id + " must be a fisherman workstation");
-            helper.assertTrue(block.defaultBlockState().is(Tags.Blocks.BARRELS_WOODEN), id + " must be in the shared block tag");
-            helper.assertTrue(new ItemStack(block).is(Tags.Items.BARRELS_WOODEN), id + " must be in the shared item tag");
+            helper.assertTrue(block.defaultBlockState().is(TagKey.create(Registries.BLOCK, ResourceLocation.parse("c:barrels/wooden"))), id + " must be in the shared block tag");
+            helper.assertTrue(new ItemStack(block).is(TagKey.create(Registries.ITEM, ResourceLocation.parse("c:barrels/wooden"))), id + " must be in the shared item tag");
 
             var drops = Block.getDrops(block.defaultBlockState(), level, helper.absolutePos(pos), barrel);
             helper.assertTrue(drops.size() == 1 && drops.getFirst().is(block.asItem()), id + " must drop itself");
@@ -57,6 +58,6 @@ public class VariantBarrelsGameTests {
             helper.assertTrue(level.getRecipeManager().byKey(ResourceLocation.parse(id)).isPresent(), id + " must have a loaded recipe");
         }
         helper.assertTrue(PoiTypes.forState(Blocks.BARREL.defaultBlockState()).orElseThrow().is(PoiTypes.FISHERMAN), "The vanilla barrel must remain a fisherman workstation");
-        helper.succeed();
+        helper.assertTrue(checked >= 10, "All ten vanilla-wood variants must be registered");
     }
 }

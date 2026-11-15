@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "morevillagers"
+    }
+  ],
   "forge:condition": {
     "type": "forge:mod_loaded",
     "modid": "morevillagers"

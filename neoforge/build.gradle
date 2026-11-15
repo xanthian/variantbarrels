@@ -1,0 +1,77 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = mod_version
+group = mod_group_id
+base.archivesName = "${mod_id}-neoforge-dev"
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+sourceSets {
+    main {
+        java.srcDir(rootProject.file('src/main/java'))
+        resources.srcDir(rootProject.file('src/main/resources'))
+        resources.exclude('META-INF/mods.toml')
+    }
+    test {
+        java.srcDir(rootProject.file('src/test/java'))
+        resources.srcDir(rootProject.file('src/test/resources'))
+        resources.exclude('META-INF/mods.toml')
+    }
+    jarTest {
+        java.srcDirs = sourceSets.test.java.srcDirs
+        resources.srcDirs = sourceSets.test.resources.srcDirs
+        resources.exclude('META-INF/mods.toml')
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.runtimeClasspath - sourceSets.main.output
+    }
+}
+
+neoForge {
+    version = neo_version
+    addModdingDependenciesTo sourceSets.test
+    addModdingDependenciesTo sourceSets.jarTest
+    parchment {
+        minecraftVersion = minecraft_version
+        mappingsVersion = '2024.11.17'
+    }
+    mods {
+        variantbarrels { sourceSet sourceSets.main }
+        variantbarrels_tests { sourceSet sourceSets.jarTest }
+    }
+    runs {
+        client {
+            client()
+            loadedMods = [mods.variantbarrels]
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            loadedMods = [mods.variantbarrels]
+        }
+        gameTestServer {
+            type = 'gameTestServer'
+            sourceSet = sourceSets.jarTest
+            loadedMods = [mods.variantbarrels_tests]
+            systemProperty 'neoforge.enabledGameTestNamespaces', 'variantbarrels_tests'
+        }
+    }
+}
+
+dependencies {
+    jarTestImplementation files(rootProject.tasks.named('jar'))
+}
+
+processResources {
+    def properties = [
+            mod_id: mod_id, mod_name: mod_name, mod_version: mod_version,
+            mod_license: mod_license, mod_authors: mod_authors, mod_description: mod_description,
+            minecraft_version_range: minecraft_version_range, neo_version_range: neo_version_range,
+            pack_format_number: pack_format_number
+    ]
+    inputs.properties properties
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) { expand properties }
+}
+
+tasks.withType(JavaCompile).configureEach { options.encoding = 'UTF-8' }

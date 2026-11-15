@@ -6,9 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
+import net.xanthian.variantbarrels.platform.Platform;
+import net.xanthian.variantbarrels.platform.RegistryBridge;
+import java.util.function.Supplier;
 import net.xanthian.variantbarrels.Initialise;
 import net.xanthian.variantbarrels.block.Vanilla;
 import net.xanthian.variantbarrels.block.compat.RegionsUnexplored;
@@ -16,10 +16,10 @@ import net.xanthian.variantbarrels.block.compat.RegionsUnexplored;
 
 public class ModCreativeTabs {
 
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Initialise.MOD_ID);
+    public static final RegistryBridge<CreativeModeTab> CREATIVE_MODE_TABS =
+            RegistryBridge.create(Registries.CREATIVE_MODE_TAB, Initialise.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> VCB_TAB = CREATIVE_MODE_TABS.register("variantbarrels",
+    public static final Supplier<CreativeModeTab> VCB_TAB = CREATIVE_MODE_TABS.register("variantbarrels",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(Vanilla.MANGROVE_BARREL.get()))
                     .title(Component.literal("Variant Barrels"))
                     .hideTitle()
@@ -36,11 +36,12 @@ public class ModCreativeTabs {
                         pOutput.accept(Vanilla.OAK_BARREL.get());
                         pOutput.accept(Blocks.BARREL); // Spruce
                         pOutput.accept(Vanilla.WARPED_BARREL.get());
-                        ModList.get().getModContainerById("regions_unexplored").ifPresent(modContainer ->
+                        if (Platform.get().isModLoaded("regions_unexplored")) {
                                 RegionsUnexplored.BLOCKS.getEntries()
                                         .stream()
-                                        .map(RegistryObject::get)
-                                        .forEach(pOutput::accept));
+                                        .map(Supplier::get)
+                                        .forEach(pOutput::accept);
+                        }
                     })
                     .build());
 }
