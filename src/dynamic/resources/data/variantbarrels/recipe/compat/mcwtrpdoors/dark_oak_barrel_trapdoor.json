@@ -1,0 +1,34 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "mcwtrpdoors"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "mcwtrpdoors:dark_oak_barrel_trapdoor",
+                                                      "minecraft:dark_oak_planks",
+                                                      "variantbarrels:dark_oak_barrel"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "group":  "barrel_trapdoors",
+    "pattern":  [
+                    " A ",
+                    "ABA",
+                    " A "
+                ],
+    "key":  {
+                "A":  "minecraft:dark_oak_planks",
+                "B":  "variantbarrels:dark_oak_barrel"
+            },
+    "result":  {
+                   "count":  4,
+                   "id":  "mcwtrpdoors:dark_oak_barrel_trapdoor"
+               }
+}

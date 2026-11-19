@@ -1,0 +1,34 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "mcwtrpdoors"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "mcwtrpdoors:warped_barrel_trapdoor",
+                                                      "minecraft:warped_planks",
+                                                      "variantbarrels:warped_barrel"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "group":  "barrel_trapdoors",
+    "pattern":  [
+                    " A ",
+                    "ABA",
+                    " A "
+                ],
+    "key":  {
+                "A":  "minecraft:warped_planks",
+                "B":  "variantbarrels:warped_barrel"
+            },
+    "result":  {
+                   "count":  4,
+                   "id":  "mcwtrpdoors:warped_barrel_trapdoor"
+               }
+}

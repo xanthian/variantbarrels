@@ -1,0 +1,32 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "reinfbarrel"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "reinfbarrel:copper_barrel",
+                                                      "minecraft:copper_ingot"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "pattern":  [
+                    "MMM",
+                    "MBM",
+                    "MMM"
+                ],
+    "key":  {
+                "B":  "#variantbarrels:barrels",
+                "M":  "minecraft:copper_ingot"
+            },
+    "result":  {
+                   "id":  "reinfbarrel:copper_barrel"
+               }
+}

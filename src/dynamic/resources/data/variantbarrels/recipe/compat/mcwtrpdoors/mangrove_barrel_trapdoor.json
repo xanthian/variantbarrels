@@ -1,0 +1,34 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "mcwtrpdoors"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "mcwtrpdoors:mangrove_barrel_trapdoor",
+                                                      "minecraft:mangrove_planks",
+                                                      "variantbarrels:mangrove_barrel"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "group":  "barrel_trapdoors",
+    "pattern":  [
+                    " A ",
+                    "ABA",
+                    " A "
+                ],
+    "key":  {
+                "A":  "minecraft:mangrove_planks",
+                "B":  "variantbarrels:mangrove_barrel"
+            },
+    "result":  {
+                   "count":  4,
+                   "id":  "mcwtrpdoors:mangrove_barrel_trapdoor"
+               }
+}

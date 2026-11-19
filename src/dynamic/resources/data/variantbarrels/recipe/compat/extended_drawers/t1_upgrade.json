@@ -1,0 +1,35 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "extended_drawers"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "extended_drawers:t1_upgrade",
+                                                      "extended_drawers:upgrade_frame",
+                                                      "minecraft:stick"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "category":  "misc",
+    "key":  {
+                "B":  "extended_drawers:upgrade_frame",
+                "M":  "#c:wooden_barrels",
+                "S":  "minecraft:stick"
+            },
+    "pattern":  [
+                    "SSS",
+                    "BMB",
+                    "SSS"
+                ],
+    "result":  {
+                   "id":  "extended_drawers:t1_upgrade"
+               },
+    "show_notification":  true
+}

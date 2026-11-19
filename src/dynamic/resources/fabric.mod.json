@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "variantbarrels",
+  "version": "${version}",
+  "name": "Variant Barrels",
+  "description": "Barrels for all wood types",
+  "authors": [
+    "Xanthian"
+  ],
+  "license": "MIT",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.xanthian.variantbarrels.client.DynamicTexturesClient"
+    ],
+    "main": [
+      "net.xanthian.variantbarrels.Initialise"
+    ]
+  },
+  "mixins": [
+    "variantbarrels.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": "*",
+    "minecraft": "~26.3",
+    "java": ">=25"
+  }
+}

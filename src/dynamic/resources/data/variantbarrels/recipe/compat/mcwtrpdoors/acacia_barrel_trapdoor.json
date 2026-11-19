@@ -1,0 +1,34 @@
+{
+    "fabric:load_conditions":  [
+                                   {
+                                       "condition":  "fabric:all_mods_loaded",
+                                       "values":  [
+                                                      "mcwtrpdoors"
+                                                  ]
+                                   },
+                                   {
+                                       "registry":  "minecraft:item",
+                                       "condition":  "fabric:registry_contains",
+                                       "values":  [
+                                                      "mcwtrpdoors:acacia_barrel_trapdoor",
+                                                      "minecraft:acacia_planks",
+                                                      "variantbarrels:acacia_barrel"
+                                                  ]
+                                   }
+                               ],
+    "type":  "minecraft:crafting_shaped",
+    "group":  "barrel_trapdoors",
+    "pattern":  [
+                    " A ",
+                    "ABA",
+                    " A "
+                ],
+    "key":  {
+                "A":  "minecraft:acacia_planks",
+                "B":  "variantbarrels:acacia_barrel"
+            },
+    "result":  {
+                   "count":  4,
+                   "id":  "mcwtrpdoors:acacia_barrel_trapdoor"
+               }
+}

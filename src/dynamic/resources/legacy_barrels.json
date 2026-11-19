@@ -1,0 +1,110 @@
+{
+    "minecraft:acacia_planks":  {
+                                    "barrel":  "variantbarrels:acacia_barrel",
+                                    "slab":  "minecraft:acacia_slab"
+                                },
+    "minecraft:bamboo_planks":  {
+                                    "barrel":  "variantbarrels:bamboo_barrel",
+                                    "slab":  "minecraft:bamboo_slab"
+                                },
+    "minecraft:birch_planks":  {
+                                   "barrel":  "variantbarrels:birch_barrel",
+                                   "slab":  "minecraft:birch_slab"
+                               },
+    "minecraft:cherry_planks":  {
+                                    "barrel":  "variantbarrels:cherry_barrel",
+                                    "slab":  "minecraft:cherry_slab"
+                                },
+    "minecraft:crimson_planks":  {
+                                     "barrel":  "variantbarrels:crimson_barrel",
+                                     "slab":  "minecraft:crimson_slab"
+                                 },
+    "cinderscapes:scorched_planks":  {
+                                         "barrel":  "variantbarrels:cs_scorched_barrel",
+                                         "slab":  "cinderscapes:scorched_slab"
+                                     },
+    "cinderscapes:umbral_planks":  {
+                                       "barrel":  "variantbarrels:cs_umbral_barrel",
+                                       "slab":  "cinderscapes:umbral_slab"
+                                   },
+    "minecraft:dark_oak_planks":  {
+                                      "barrel":  "variantbarrels:dark_oak_barrel",
+                                      "slab":  "minecraft:dark_oak_slab"
+                                  },
+    "minecraft:jungle_planks":  {
+                                    "barrel":  "variantbarrels:jungle_barrel",
+                                    "slab":  "minecraft:jungle_slab"
+                                },
+    "minecraft:mangrove_planks":  {
+                                      "barrel":  "variantbarrels:mangrove_barrel",
+                                      "slab":  "minecraft:mangrove_slab"
+                                  },
+    "natures_spirit:aspen_planks":  {
+                                        "barrel":  "variantbarrels:ns_aspen_barrel",
+                                        "slab":  "natures_spirit:aspen_slab"
+                                    },
+    "natures_spirit:cypress_planks":  {
+                                          "barrel":  "variantbarrels:ns_cypress_barrel",
+                                          "slab":  "natures_spirit:cypress_slab"
+                                      },
+    "natures_spirit:fir_planks":  {
+                                      "barrel":  "variantbarrels:ns_fir_barrel",
+                                      "slab":  "natures_spirit:fir_slab"
+                                  },
+    "natures_spirit:joshua_planks":  {
+                                         "barrel":  "variantbarrels:ns_joshua_barrel",
+                                         "slab":  "natures_spirit:joshua_slab"
+                                     },
+    "natures_spirit:maple_planks":  {
+                                        "barrel":  "variantbarrels:ns_maple_barrel",
+                                        "slab":  "natures_spirit:maple_slab"
+                                    },
+    "natures_spirit:olive_planks":  {
+                                        "barrel":  "variantbarrels:ns_olive_barrel",
+                                        "slab":  "natures_spirit:olive_slab"
+                                    },
+    "natures_spirit:redwood_planks":  {
+                                          "barrel":  "variantbarrels:ns_redwood_barrel",
+                                          "slab":  "natures_spirit:redwood_slab"
+                                      },
+    "natures_spirit:sugi_planks":  {
+                                       "barrel":  "variantbarrels:ns_sugi_barrel",
+                                       "slab":  "natures_spirit:sugi_slab"
+                                   },
+    "natures_spirit:willow_planks":  {
+                                         "barrel":  "variantbarrels:ns_willow_barrel",
+                                         "slab":  "natures_spirit:willow_slab"
+                                     },
+    "natures_spirit:wisteria_planks":  {
+                                           "barrel":  "variantbarrels:ns_wisteria_barrel",
+                                           "slab":  "natures_spirit:wisteria_slab"
+                                       },
+    "minecraft:oak_planks":  {
+                                 "barrel":  "variantbarrels:oak_barrel",
+                                 "slab":  "minecraft:oak_slab"
+                             },
+    "techreborn:rubber_planks":  {
+                                     "barrel":  "variantbarrels:tr_rubber_barrel",
+                                     "slab":  "techreborn:rubber_slab"
+                                 },
+    "minecraft:warped_planks":  {
+                                    "barrel":  "variantbarrels:warped_barrel",
+                                    "slab":  "minecraft:warped_slab"
+                                },
+    "botania:dreamwood_planks":  {
+                                     "barrel":  "variantbarrels:bot_dreamwood_barrel",
+                                     "slab":  "botania:dreamwood_planks_slab"
+                                 },
+    "botania:livingwood_planks":  {
+                                      "barrel":  "variantbarrels:bot_livingwood_barrel",
+                                      "slab":  "botania:livingwood_planks_slab"
+                                  },
+    "botania:shimmerwood_planks":  {
+                                       "barrel":  "variantbarrels:bot_shimmerwood_barrel",
+                                       "slab":  "botania:shimmerwood_planks_slab"
+                                   },
+    "snifferplus:stone_pine_planks":  {
+                                          "barrel":  "variantbarrels:sp_stone_pine_barrel",
+                                          "slab":  "snifferplus:stone_pine_slab"
+                                      }
+}
